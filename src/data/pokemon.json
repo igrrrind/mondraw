@@ -1,0 +1,7177 @@
+[
+  {
+    "id": 1,
+    "pokedex_id": 1,
+    "name": "bulbasaur",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 2,
+    "pokedex_id": 2,
+    "name": "ivysaur",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 3,
+    "pokedex_id": 3,
+    "name": "venusaur",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 4,
+    "pokedex_id": 4,
+    "name": "charmander",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 5,
+    "pokedex_id": 5,
+    "name": "charmeleon",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 6,
+    "pokedex_id": 6,
+    "name": "charizard",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 7,
+    "pokedex_id": 7,
+    "name": "squirtle",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 8,
+    "pokedex_id": 8,
+    "name": "wartortle",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 9,
+    "pokedex_id": 9,
+    "name": "blastoise",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 10,
+    "pokedex_id": 10,
+    "name": "caterpie",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 11,
+    "pokedex_id": 11,
+    "name": "metapod",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 12,
+    "pokedex_id": 12,
+    "name": "butterfree",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 13,
+    "pokedex_id": 13,
+    "name": "weedle",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 14,
+    "pokedex_id": 14,
+    "name": "kakuna",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 15,
+    "pokedex_id": 15,
+    "name": "beedrill",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 16,
+    "pokedex_id": 16,
+    "name": "pidgey",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 17,
+    "pokedex_id": 17,
+    "name": "pidgeotto",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 18,
+    "pokedex_id": 18,
+    "name": "pidgeot",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 19,
+    "pokedex_id": 19,
+    "name": "rattata",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 20,
+    "pokedex_id": 20,
+    "name": "raticate",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 21,
+    "pokedex_id": 21,
+    "name": "spearow",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 22,
+    "pokedex_id": 22,
+    "name": "fearow",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 23,
+    "pokedex_id": 23,
+    "name": "ekans",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 24,
+    "pokedex_id": 24,
+    "name": "arbok",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 25,
+    "pokedex_id": 25,
+    "name": "pikachu",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 26,
+    "pokedex_id": 26,
+    "name": "raichu",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 27,
+    "pokedex_id": 27,
+    "name": "sandshrew",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 28,
+    "pokedex_id": 28,
+    "name": "sandslash",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 29,
+    "pokedex_id": 29,
+    "name": "nidoran-f",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 30,
+    "pokedex_id": 30,
+    "name": "nidorina",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 31,
+    "pokedex_id": 31,
+    "name": "nidoqueen",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 32,
+    "pokedex_id": 32,
+    "name": "nidoran-m",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 33,
+    "pokedex_id": 33,
+    "name": "nidorino",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 34,
+    "pokedex_id": 34,
+    "name": "nidoking",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 35,
+    "pokedex_id": 35,
+    "name": "clefairy",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 36,
+    "pokedex_id": 36,
+    "name": "clefable",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 37,
+    "pokedex_id": 37,
+    "name": "vulpix",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 38,
+    "pokedex_id": 38,
+    "name": "ninetales",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 39,
+    "pokedex_id": 39,
+    "name": "jigglypuff",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 40,
+    "pokedex_id": 40,
+    "name": "wigglytuff",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 41,
+    "pokedex_id": 41,
+    "name": "zubat",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 42,
+    "pokedex_id": 42,
+    "name": "golbat",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 43,
+    "pokedex_id": 43,
+    "name": "oddish",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 44,
+    "pokedex_id": 44,
+    "name": "gloom",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 45,
+    "pokedex_id": 45,
+    "name": "vileplume",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 46,
+    "pokedex_id": 46,
+    "name": "paras",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 47,
+    "pokedex_id": 47,
+    "name": "parasect",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 48,
+    "pokedex_id": 48,
+    "name": "venonat",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 49,
+    "pokedex_id": 49,
+    "name": "venomoth",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 50,
+    "pokedex_id": 50,
+    "name": "diglett",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 51,
+    "pokedex_id": 51,
+    "name": "dugtrio",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 52,
+    "pokedex_id": 52,
+    "name": "meowth",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 53,
+    "pokedex_id": 53,
+    "name": "persian",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 54,
+    "pokedex_id": 54,
+    "name": "psyduck",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 55,
+    "pokedex_id": 55,
+    "name": "golduck",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 56,
+    "pokedex_id": 56,
+    "name": "mankey",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 57,
+    "pokedex_id": 57,
+    "name": "primeape",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 58,
+    "pokedex_id": 58,
+    "name": "growlithe",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 59,
+    "pokedex_id": 59,
+    "name": "arcanine",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 60,
+    "pokedex_id": 60,
+    "name": "poliwag",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 61,
+    "pokedex_id": 61,
+    "name": "poliwhirl",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 62,
+    "pokedex_id": 62,
+    "name": "poliwrath",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 63,
+    "pokedex_id": 63,
+    "name": "abra",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 64,
+    "pokedex_id": 64,
+    "name": "kadabra",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 65,
+    "pokedex_id": 65,
+    "name": "alakazam",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 66,
+    "pokedex_id": 66,
+    "name": "machop",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 67,
+    "pokedex_id": 67,
+    "name": "machoke",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 68,
+    "pokedex_id": 68,
+    "name": "machamp",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 69,
+    "pokedex_id": 69,
+    "name": "bellsprout",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 70,
+    "pokedex_id": 70,
+    "name": "weepinbell",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 71,
+    "pokedex_id": 71,
+    "name": "victreebel",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 72,
+    "pokedex_id": 72,
+    "name": "tentacool",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 73,
+    "pokedex_id": 73,
+    "name": "tentacruel",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 74,
+    "pokedex_id": 74,
+    "name": "geodude",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 75,
+    "pokedex_id": 75,
+    "name": "graveler",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 76,
+    "pokedex_id": 76,
+    "name": "golem",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 77,
+    "pokedex_id": 77,
+    "name": "ponyta",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 78,
+    "pokedex_id": 78,
+    "name": "rapidash",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 79,
+    "pokedex_id": 79,
+    "name": "slowpoke",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 80,
+    "pokedex_id": 80,
+    "name": "slowbro",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 81,
+    "pokedex_id": 81,
+    "name": "magnemite",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 82,
+    "pokedex_id": 82,
+    "name": "magneton",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 83,
+    "pokedex_id": 83,
+    "name": "farfetchd",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 84,
+    "pokedex_id": 84,
+    "name": "doduo",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 85,
+    "pokedex_id": 85,
+    "name": "dodrio",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 86,
+    "pokedex_id": 86,
+    "name": "seel",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 87,
+    "pokedex_id": 87,
+    "name": "dewgong",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 88,
+    "pokedex_id": 88,
+    "name": "grimer",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 89,
+    "pokedex_id": 89,
+    "name": "muk",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 90,
+    "pokedex_id": 90,
+    "name": "shellder",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 91,
+    "pokedex_id": 91,
+    "name": "cloyster",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 92,
+    "pokedex_id": 92,
+    "name": "gastly",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 93,
+    "pokedex_id": 93,
+    "name": "haunter",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 94,
+    "pokedex_id": 94,
+    "name": "gengar",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 95,
+    "pokedex_id": 95,
+    "name": "onix",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 96,
+    "pokedex_id": 96,
+    "name": "drowzee",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 97,
+    "pokedex_id": 97,
+    "name": "hypno",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 98,
+    "pokedex_id": 98,
+    "name": "krabby",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 99,
+    "pokedex_id": 99,
+    "name": "kingler",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 100,
+    "pokedex_id": 100,
+    "name": "voltorb",
+    "generation": 1,
+    "rarity": 3
+  },
+  {
+    "id": 101,
+    "pokedex_id": 101,
+    "name": "electrode",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 102,
+    "pokedex_id": 102,
+    "name": "exeggcute",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 103,
+    "pokedex_id": 103,
+    "name": "exeggutor",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 104,
+    "pokedex_id": 104,
+    "name": "cubone",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 105,
+    "pokedex_id": 105,
+    "name": "marowak",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 106,
+    "pokedex_id": 106,
+    "name": "hitmonlee",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 107,
+    "pokedex_id": 107,
+    "name": "hitmonchan",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 108,
+    "pokedex_id": 108,
+    "name": "lickitung",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 109,
+    "pokedex_id": 109,
+    "name": "koffing",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 110,
+    "pokedex_id": 110,
+    "name": "weezing",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 111,
+    "pokedex_id": 111,
+    "name": "rhyhorn",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 112,
+    "pokedex_id": 112,
+    "name": "rhydon",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 113,
+    "pokedex_id": 113,
+    "name": "chansey",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 114,
+    "pokedex_id": 114,
+    "name": "tangela",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 115,
+    "pokedex_id": 115,
+    "name": "kangaskhan",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 116,
+    "pokedex_id": 116,
+    "name": "horsea",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 117,
+    "pokedex_id": 117,
+    "name": "seadra",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 118,
+    "pokedex_id": 118,
+    "name": "goldeen",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 119,
+    "pokedex_id": 119,
+    "name": "seaking",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 120,
+    "pokedex_id": 120,
+    "name": "staryu",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 121,
+    "pokedex_id": 121,
+    "name": "starmie",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 122,
+    "pokedex_id": 122,
+    "name": "mr-mime",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 123,
+    "pokedex_id": 123,
+    "name": "scyther",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 124,
+    "pokedex_id": 124,
+    "name": "jynx",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 125,
+    "pokedex_id": 125,
+    "name": "electabuzz",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 126,
+    "pokedex_id": 126,
+    "name": "magmar",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 127,
+    "pokedex_id": 127,
+    "name": "pinsir",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 128,
+    "pokedex_id": 128,
+    "name": "tauros",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 129,
+    "pokedex_id": 129,
+    "name": "magikarp",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 130,
+    "pokedex_id": 130,
+    "name": "gyarados",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 131,
+    "pokedex_id": 131,
+    "name": "lapras",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 132,
+    "pokedex_id": 132,
+    "name": "ditto",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 133,
+    "pokedex_id": 133,
+    "name": "eevee",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 134,
+    "pokedex_id": 134,
+    "name": "vaporeon",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 135,
+    "pokedex_id": 135,
+    "name": "jolteon",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 136,
+    "pokedex_id": 136,
+    "name": "flareon",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 137,
+    "pokedex_id": 137,
+    "name": "porygon",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 138,
+    "pokedex_id": 138,
+    "name": "omanyte",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 139,
+    "pokedex_id": 139,
+    "name": "omastar",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 140,
+    "pokedex_id": 140,
+    "name": "kabuto",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 141,
+    "pokedex_id": 141,
+    "name": "kabutops",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 142,
+    "pokedex_id": 142,
+    "name": "aerodactyl",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 143,
+    "pokedex_id": 143,
+    "name": "snorlax",
+    "generation": 1,
+    "rarity": 2
+  },
+  {
+    "id": 144,
+    "pokedex_id": 144,
+    "name": "articuno",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 145,
+    "pokedex_id": 145,
+    "name": "zapdos",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 146,
+    "pokedex_id": 146,
+    "name": "moltres",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 147,
+    "pokedex_id": 147,
+    "name": "dratini",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 148,
+    "pokedex_id": 148,
+    "name": "dragonair",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 149,
+    "pokedex_id": 149,
+    "name": "dragonite",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 150,
+    "pokedex_id": 150,
+    "name": "mewtwo",
+    "generation": 1,
+    "rarity": 1
+  },
+  {
+    "id": 151,
+    "pokedex_id": 151,
+    "name": "mew",
+    "generation": 1,
+    "rarity": 4
+  },
+  {
+    "id": 152,
+    "pokedex_id": 152,
+    "name": "chikorita",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 153,
+    "pokedex_id": 153,
+    "name": "bayleef",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 154,
+    "pokedex_id": 154,
+    "name": "meganium",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 155,
+    "pokedex_id": 155,
+    "name": "cyndaquil",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 156,
+    "pokedex_id": 156,
+    "name": "quilava",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 157,
+    "pokedex_id": 157,
+    "name": "typhlosion",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 158,
+    "pokedex_id": 158,
+    "name": "totodile",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 159,
+    "pokedex_id": 159,
+    "name": "croconaw",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 160,
+    "pokedex_id": 160,
+    "name": "feraligatr",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 161,
+    "pokedex_id": 161,
+    "name": "sentret",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 162,
+    "pokedex_id": 162,
+    "name": "furret",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 163,
+    "pokedex_id": 163,
+    "name": "hoothoot",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 164,
+    "pokedex_id": 164,
+    "name": "noctowl",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 165,
+    "pokedex_id": 165,
+    "name": "ledyba",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 166,
+    "pokedex_id": 166,
+    "name": "ledian",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 167,
+    "pokedex_id": 167,
+    "name": "spinarak",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 168,
+    "pokedex_id": 168,
+    "name": "ariados",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 169,
+    "pokedex_id": 169,
+    "name": "crobat",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 170,
+    "pokedex_id": 170,
+    "name": "chinchou",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 171,
+    "pokedex_id": 171,
+    "name": "lanturn",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 172,
+    "pokedex_id": 172,
+    "name": "pichu",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 173,
+    "pokedex_id": 173,
+    "name": "cleffa",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 174,
+    "pokedex_id": 174,
+    "name": "igglybuff",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 175,
+    "pokedex_id": 175,
+    "name": "togepi",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 176,
+    "pokedex_id": 176,
+    "name": "togetic",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 177,
+    "pokedex_id": 177,
+    "name": "natu",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 178,
+    "pokedex_id": 178,
+    "name": "xatu",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 179,
+    "pokedex_id": 179,
+    "name": "mareep",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 180,
+    "pokedex_id": 180,
+    "name": "flaaffy",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 181,
+    "pokedex_id": 181,
+    "name": "ampharos",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 182,
+    "pokedex_id": 182,
+    "name": "bellossom",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 183,
+    "pokedex_id": 183,
+    "name": "marill",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 184,
+    "pokedex_id": 184,
+    "name": "azumarill",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 185,
+    "pokedex_id": 185,
+    "name": "sudowoodo",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 186,
+    "pokedex_id": 186,
+    "name": "politoed",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 187,
+    "pokedex_id": 187,
+    "name": "hoppip",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 188,
+    "pokedex_id": 188,
+    "name": "skiploom",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 189,
+    "pokedex_id": 189,
+    "name": "jumpluff",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 190,
+    "pokedex_id": 190,
+    "name": "aipom",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 191,
+    "pokedex_id": 191,
+    "name": "sunkern",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 192,
+    "pokedex_id": 192,
+    "name": "sunflora",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 193,
+    "pokedex_id": 193,
+    "name": "yanma",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 194,
+    "pokedex_id": 194,
+    "name": "wooper",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 195,
+    "pokedex_id": 195,
+    "name": "quagsire",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 196,
+    "pokedex_id": 196,
+    "name": "espeon",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 197,
+    "pokedex_id": 197,
+    "name": "umbreon",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 198,
+    "pokedex_id": 198,
+    "name": "murkrow",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 199,
+    "pokedex_id": 199,
+    "name": "slowking",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 200,
+    "pokedex_id": 200,
+    "name": "misdreavus",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 201,
+    "pokedex_id": 201,
+    "name": "unown",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 202,
+    "pokedex_id": 202,
+    "name": "wobbuffet",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 203,
+    "pokedex_id": 203,
+    "name": "girafarig",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 204,
+    "pokedex_id": 204,
+    "name": "pineco",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 205,
+    "pokedex_id": 205,
+    "name": "forretress",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 206,
+    "pokedex_id": 206,
+    "name": "dunsparce",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 207,
+    "pokedex_id": 207,
+    "name": "gligar",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 208,
+    "pokedex_id": 208,
+    "name": "steelix",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 209,
+    "pokedex_id": 209,
+    "name": "snubbull",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 210,
+    "pokedex_id": 210,
+    "name": "granbull",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 211,
+    "pokedex_id": 211,
+    "name": "qwilfish",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 212,
+    "pokedex_id": 212,
+    "name": "scizor",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 213,
+    "pokedex_id": 213,
+    "name": "shuckle",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 214,
+    "pokedex_id": 214,
+    "name": "heracross",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 215,
+    "pokedex_id": 215,
+    "name": "sneasel",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 216,
+    "pokedex_id": 216,
+    "name": "teddiursa",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 217,
+    "pokedex_id": 217,
+    "name": "ursaring",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 218,
+    "pokedex_id": 218,
+    "name": "slugma",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 219,
+    "pokedex_id": 219,
+    "name": "magcargo",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 220,
+    "pokedex_id": 220,
+    "name": "swinub",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 221,
+    "pokedex_id": 221,
+    "name": "piloswine",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 222,
+    "pokedex_id": 222,
+    "name": "corsola",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 223,
+    "pokedex_id": 223,
+    "name": "remoraid",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 224,
+    "pokedex_id": 224,
+    "name": "octillery",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 225,
+    "pokedex_id": 225,
+    "name": "delibird",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 226,
+    "pokedex_id": 226,
+    "name": "mantine",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 227,
+    "pokedex_id": 227,
+    "name": "skarmory",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 228,
+    "pokedex_id": 228,
+    "name": "houndour",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 229,
+    "pokedex_id": 229,
+    "name": "houndoom",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 230,
+    "pokedex_id": 230,
+    "name": "kingdra",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 231,
+    "pokedex_id": 231,
+    "name": "phanpy",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 232,
+    "pokedex_id": 232,
+    "name": "donphan",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 233,
+    "pokedex_id": 233,
+    "name": "porygon2",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 234,
+    "pokedex_id": 234,
+    "name": "stantler",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 235,
+    "pokedex_id": 235,
+    "name": "smeargle",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 236,
+    "pokedex_id": 236,
+    "name": "tyrogue",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 237,
+    "pokedex_id": 237,
+    "name": "hitmontop",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 238,
+    "pokedex_id": 238,
+    "name": "smoochum",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 239,
+    "pokedex_id": 239,
+    "name": "elekid",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 240,
+    "pokedex_id": 240,
+    "name": "magby",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 241,
+    "pokedex_id": 241,
+    "name": "miltank",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 242,
+    "pokedex_id": 242,
+    "name": "blissey",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 243,
+    "pokedex_id": 243,
+    "name": "raikou",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 244,
+    "pokedex_id": 244,
+    "name": "entei",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 245,
+    "pokedex_id": 245,
+    "name": "suicune",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 246,
+    "pokedex_id": 246,
+    "name": "larvitar",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 247,
+    "pokedex_id": 247,
+    "name": "pupitar",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 248,
+    "pokedex_id": 248,
+    "name": "tyranitar",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 249,
+    "pokedex_id": 249,
+    "name": "lugia",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 250,
+    "pokedex_id": 250,
+    "name": "ho-oh",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 251,
+    "pokedex_id": 251,
+    "name": "celebi",
+    "generation": 2,
+    "rarity": 3
+  },
+  {
+    "id": 252,
+    "pokedex_id": 252,
+    "name": "treecko",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 253,
+    "pokedex_id": 253,
+    "name": "grovyle",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 254,
+    "pokedex_id": 254,
+    "name": "sceptile",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 255,
+    "pokedex_id": 255,
+    "name": "torchic",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 256,
+    "pokedex_id": 256,
+    "name": "combusken",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 257,
+    "pokedex_id": 257,
+    "name": "blaziken",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 258,
+    "pokedex_id": 258,
+    "name": "mudkip",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 259,
+    "pokedex_id": 259,
+    "name": "marshtomp",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 260,
+    "pokedex_id": 260,
+    "name": "swampert",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 261,
+    "pokedex_id": 261,
+    "name": "poochyena",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 262,
+    "pokedex_id": 262,
+    "name": "mightyena",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 263,
+    "pokedex_id": 263,
+    "name": "zigzagoon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 264,
+    "pokedex_id": 264,
+    "name": "linoone",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 265,
+    "pokedex_id": 265,
+    "name": "wurmple",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 266,
+    "pokedex_id": 266,
+    "name": "silcoon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 267,
+    "pokedex_id": 267,
+    "name": "beautifly",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 268,
+    "pokedex_id": 268,
+    "name": "cascoon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 269,
+    "pokedex_id": 269,
+    "name": "dustox",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 270,
+    "pokedex_id": 270,
+    "name": "lotad",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 271,
+    "pokedex_id": 271,
+    "name": "lombre",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 272,
+    "pokedex_id": 272,
+    "name": "ludicolo",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 273,
+    "pokedex_id": 273,
+    "name": "seedot",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 274,
+    "pokedex_id": 274,
+    "name": "nuzleaf",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 275,
+    "pokedex_id": 275,
+    "name": "shiftry",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 276,
+    "pokedex_id": 276,
+    "name": "taillow",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 277,
+    "pokedex_id": 277,
+    "name": "swellow",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 278,
+    "pokedex_id": 278,
+    "name": "wingull",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 279,
+    "pokedex_id": 279,
+    "name": "pelipper",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 280,
+    "pokedex_id": 280,
+    "name": "ralts",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 281,
+    "pokedex_id": 281,
+    "name": "kirlia",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 282,
+    "pokedex_id": 282,
+    "name": "gardevoir",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 283,
+    "pokedex_id": 283,
+    "name": "surskit",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 284,
+    "pokedex_id": 284,
+    "name": "masquerain",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 285,
+    "pokedex_id": 285,
+    "name": "shroomish",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 286,
+    "pokedex_id": 286,
+    "name": "breloom",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 287,
+    "pokedex_id": 287,
+    "name": "slakoth",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 288,
+    "pokedex_id": 288,
+    "name": "vigoroth",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 289,
+    "pokedex_id": 289,
+    "name": "slaking",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 290,
+    "pokedex_id": 290,
+    "name": "nincada",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 291,
+    "pokedex_id": 291,
+    "name": "ninjask",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 292,
+    "pokedex_id": 292,
+    "name": "shedinja",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 293,
+    "pokedex_id": 293,
+    "name": "whismur",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 294,
+    "pokedex_id": 294,
+    "name": "loudred",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 295,
+    "pokedex_id": 295,
+    "name": "exploud",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 296,
+    "pokedex_id": 296,
+    "name": "makuhita",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 297,
+    "pokedex_id": 297,
+    "name": "hariyama",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 298,
+    "pokedex_id": 298,
+    "name": "azurill",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 299,
+    "pokedex_id": 299,
+    "name": "nosepass",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 300,
+    "pokedex_id": 300,
+    "name": "skitty",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 301,
+    "pokedex_id": 301,
+    "name": "delcatty",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 302,
+    "pokedex_id": 302,
+    "name": "sableye",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 303,
+    "pokedex_id": 303,
+    "name": "mawile",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 304,
+    "pokedex_id": 304,
+    "name": "aron",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 305,
+    "pokedex_id": 305,
+    "name": "lairon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 306,
+    "pokedex_id": 306,
+    "name": "aggron",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 307,
+    "pokedex_id": 307,
+    "name": "meditite",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 308,
+    "pokedex_id": 308,
+    "name": "medicham",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 309,
+    "pokedex_id": 309,
+    "name": "electrike",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 310,
+    "pokedex_id": 310,
+    "name": "manectric",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 311,
+    "pokedex_id": 311,
+    "name": "plusle",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 312,
+    "pokedex_id": 312,
+    "name": "minun",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 313,
+    "pokedex_id": 313,
+    "name": "volbeat",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 314,
+    "pokedex_id": 314,
+    "name": "illumise",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 315,
+    "pokedex_id": 315,
+    "name": "roselia",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 316,
+    "pokedex_id": 316,
+    "name": "gulpin",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 317,
+    "pokedex_id": 317,
+    "name": "swalot",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 318,
+    "pokedex_id": 318,
+    "name": "carvanha",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 319,
+    "pokedex_id": 319,
+    "name": "sharpedo",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 320,
+    "pokedex_id": 320,
+    "name": "wailmer",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 321,
+    "pokedex_id": 321,
+    "name": "wailord",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 322,
+    "pokedex_id": 322,
+    "name": "numel",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 323,
+    "pokedex_id": 323,
+    "name": "camerupt",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 324,
+    "pokedex_id": 324,
+    "name": "torkoal",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 325,
+    "pokedex_id": 325,
+    "name": "spoink",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 326,
+    "pokedex_id": 326,
+    "name": "grumpig",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 327,
+    "pokedex_id": 327,
+    "name": "spinda",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 328,
+    "pokedex_id": 328,
+    "name": "trapinch",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 329,
+    "pokedex_id": 329,
+    "name": "vibrava",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 330,
+    "pokedex_id": 330,
+    "name": "flygon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 331,
+    "pokedex_id": 331,
+    "name": "cacnea",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 332,
+    "pokedex_id": 332,
+    "name": "cacturne",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 333,
+    "pokedex_id": 333,
+    "name": "swablu",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 334,
+    "pokedex_id": 334,
+    "name": "altaria",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 335,
+    "pokedex_id": 335,
+    "name": "zangoose",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 336,
+    "pokedex_id": 336,
+    "name": "seviper",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 337,
+    "pokedex_id": 337,
+    "name": "lunatone",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 338,
+    "pokedex_id": 338,
+    "name": "solrock",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 339,
+    "pokedex_id": 339,
+    "name": "barboach",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 340,
+    "pokedex_id": 340,
+    "name": "whiscash",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 341,
+    "pokedex_id": 341,
+    "name": "corphish",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 342,
+    "pokedex_id": 342,
+    "name": "crawdaunt",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 343,
+    "pokedex_id": 343,
+    "name": "baltoy",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 344,
+    "pokedex_id": 344,
+    "name": "claydol",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 345,
+    "pokedex_id": 345,
+    "name": "lileep",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 346,
+    "pokedex_id": 346,
+    "name": "cradily",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 347,
+    "pokedex_id": 347,
+    "name": "anorith",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 348,
+    "pokedex_id": 348,
+    "name": "armaldo",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 349,
+    "pokedex_id": 349,
+    "name": "feebas",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 350,
+    "pokedex_id": 350,
+    "name": "milotic",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 351,
+    "pokedex_id": 351,
+    "name": "castform",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 352,
+    "pokedex_id": 352,
+    "name": "kecleon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 353,
+    "pokedex_id": 353,
+    "name": "shuppet",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 354,
+    "pokedex_id": 354,
+    "name": "banette",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 355,
+    "pokedex_id": 355,
+    "name": "duskull",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 356,
+    "pokedex_id": 356,
+    "name": "dusclops",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 357,
+    "pokedex_id": 357,
+    "name": "tropius",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 358,
+    "pokedex_id": 358,
+    "name": "chimecho",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 359,
+    "pokedex_id": 359,
+    "name": "absol",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 360,
+    "pokedex_id": 360,
+    "name": "wynaut",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 361,
+    "pokedex_id": 361,
+    "name": "snorunt",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 362,
+    "pokedex_id": 362,
+    "name": "glalie",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 363,
+    "pokedex_id": 363,
+    "name": "spheal",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 364,
+    "pokedex_id": 364,
+    "name": "sealeo",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 365,
+    "pokedex_id": 365,
+    "name": "walrein",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 366,
+    "pokedex_id": 366,
+    "name": "clamperl",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 367,
+    "pokedex_id": 367,
+    "name": "huntail",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 368,
+    "pokedex_id": 368,
+    "name": "gorebyss",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 369,
+    "pokedex_id": 369,
+    "name": "relicanth",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 370,
+    "pokedex_id": 370,
+    "name": "luvdisc",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 371,
+    "pokedex_id": 371,
+    "name": "bagon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 372,
+    "pokedex_id": 372,
+    "name": "shelgon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 373,
+    "pokedex_id": 373,
+    "name": "salamence",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 374,
+    "pokedex_id": 374,
+    "name": "beldum",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 375,
+    "pokedex_id": 375,
+    "name": "metang",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 376,
+    "pokedex_id": 376,
+    "name": "metagross",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 377,
+    "pokedex_id": 377,
+    "name": "regirock",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 378,
+    "pokedex_id": 378,
+    "name": "regice",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 379,
+    "pokedex_id": 379,
+    "name": "registeel",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 380,
+    "pokedex_id": 380,
+    "name": "latias",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 381,
+    "pokedex_id": 381,
+    "name": "latios",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 382,
+    "pokedex_id": 382,
+    "name": "kyogre",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 383,
+    "pokedex_id": 383,
+    "name": "groudon",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 384,
+    "pokedex_id": 384,
+    "name": "rayquaza",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 385,
+    "pokedex_id": 385,
+    "name": "jirachi",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 386,
+    "pokedex_id": 386,
+    "name": "deoxys-normal",
+    "generation": 3,
+    "rarity": 3
+  },
+  {
+    "id": 387,
+    "pokedex_id": 387,
+    "name": "turtwig",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 388,
+    "pokedex_id": 388,
+    "name": "grotle",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 389,
+    "pokedex_id": 389,
+    "name": "torterra",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 390,
+    "pokedex_id": 390,
+    "name": "chimchar",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 391,
+    "pokedex_id": 391,
+    "name": "monferno",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 392,
+    "pokedex_id": 392,
+    "name": "infernape",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 393,
+    "pokedex_id": 393,
+    "name": "piplup",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 394,
+    "pokedex_id": 394,
+    "name": "prinplup",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 395,
+    "pokedex_id": 395,
+    "name": "empoleon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 396,
+    "pokedex_id": 396,
+    "name": "starly",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 397,
+    "pokedex_id": 397,
+    "name": "staravia",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 398,
+    "pokedex_id": 398,
+    "name": "staraptor",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 399,
+    "pokedex_id": 399,
+    "name": "bidoof",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 400,
+    "pokedex_id": 400,
+    "name": "bibarel",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 401,
+    "pokedex_id": 401,
+    "name": "kricketot",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 402,
+    "pokedex_id": 402,
+    "name": "kricketune",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 403,
+    "pokedex_id": 403,
+    "name": "shinx",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 404,
+    "pokedex_id": 404,
+    "name": "luxio",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 405,
+    "pokedex_id": 405,
+    "name": "luxray",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 406,
+    "pokedex_id": 406,
+    "name": "budew",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 407,
+    "pokedex_id": 407,
+    "name": "roserade",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 408,
+    "pokedex_id": 408,
+    "name": "cranidos",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 409,
+    "pokedex_id": 409,
+    "name": "rampardos",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 410,
+    "pokedex_id": 410,
+    "name": "shieldon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 411,
+    "pokedex_id": 411,
+    "name": "bastiodon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 412,
+    "pokedex_id": 412,
+    "name": "burmy",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 413,
+    "pokedex_id": 413,
+    "name": "wormadam-plant",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 414,
+    "pokedex_id": 414,
+    "name": "mothim",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 415,
+    "pokedex_id": 415,
+    "name": "combee",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 416,
+    "pokedex_id": 416,
+    "name": "vespiquen",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 417,
+    "pokedex_id": 417,
+    "name": "pachirisu",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 418,
+    "pokedex_id": 418,
+    "name": "buizel",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 419,
+    "pokedex_id": 419,
+    "name": "floatzel",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 420,
+    "pokedex_id": 420,
+    "name": "cherubi",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 421,
+    "pokedex_id": 421,
+    "name": "cherrim",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 422,
+    "pokedex_id": 422,
+    "name": "shellos",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 423,
+    "pokedex_id": 423,
+    "name": "gastrodon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 424,
+    "pokedex_id": 424,
+    "name": "ambipom",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 425,
+    "pokedex_id": 425,
+    "name": "drifloon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 426,
+    "pokedex_id": 426,
+    "name": "drifblim",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 427,
+    "pokedex_id": 427,
+    "name": "buneary",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 428,
+    "pokedex_id": 428,
+    "name": "lopunny",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 429,
+    "pokedex_id": 429,
+    "name": "mismagius",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 430,
+    "pokedex_id": 430,
+    "name": "honchkrow",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 431,
+    "pokedex_id": 431,
+    "name": "glameow",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 432,
+    "pokedex_id": 432,
+    "name": "purugly",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 433,
+    "pokedex_id": 433,
+    "name": "chingling",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 434,
+    "pokedex_id": 434,
+    "name": "stunky",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 435,
+    "pokedex_id": 435,
+    "name": "skuntank",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 436,
+    "pokedex_id": 436,
+    "name": "bronzor",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 437,
+    "pokedex_id": 437,
+    "name": "bronzong",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 438,
+    "pokedex_id": 438,
+    "name": "bonsly",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 439,
+    "pokedex_id": 439,
+    "name": "mime-jr",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 440,
+    "pokedex_id": 440,
+    "name": "happiny",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 441,
+    "pokedex_id": 441,
+    "name": "chatot",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 442,
+    "pokedex_id": 442,
+    "name": "spiritomb",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 443,
+    "pokedex_id": 443,
+    "name": "gible",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 444,
+    "pokedex_id": 444,
+    "name": "gabite",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 445,
+    "pokedex_id": 445,
+    "name": "garchomp",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 446,
+    "pokedex_id": 446,
+    "name": "munchlax",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 447,
+    "pokedex_id": 447,
+    "name": "riolu",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 448,
+    "pokedex_id": 448,
+    "name": "lucario",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 449,
+    "pokedex_id": 449,
+    "name": "hippopotas",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 450,
+    "pokedex_id": 450,
+    "name": "hippowdon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 451,
+    "pokedex_id": 451,
+    "name": "skorupi",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 452,
+    "pokedex_id": 452,
+    "name": "drapion",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 453,
+    "pokedex_id": 453,
+    "name": "croagunk",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 454,
+    "pokedex_id": 454,
+    "name": "toxicroak",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 455,
+    "pokedex_id": 455,
+    "name": "carnivine",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 456,
+    "pokedex_id": 456,
+    "name": "finneon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 457,
+    "pokedex_id": 457,
+    "name": "lumineon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 458,
+    "pokedex_id": 458,
+    "name": "mantyke",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 459,
+    "pokedex_id": 459,
+    "name": "snover",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 460,
+    "pokedex_id": 460,
+    "name": "abomasnow",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 461,
+    "pokedex_id": 461,
+    "name": "weavile",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 462,
+    "pokedex_id": 462,
+    "name": "magnezone",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 463,
+    "pokedex_id": 463,
+    "name": "lickilicky",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 464,
+    "pokedex_id": 464,
+    "name": "rhyperior",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 465,
+    "pokedex_id": 465,
+    "name": "tangrowth",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 466,
+    "pokedex_id": 466,
+    "name": "electivire",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 467,
+    "pokedex_id": 467,
+    "name": "magmortar",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 468,
+    "pokedex_id": 468,
+    "name": "togekiss",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 469,
+    "pokedex_id": 469,
+    "name": "yanmega",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 470,
+    "pokedex_id": 470,
+    "name": "leafeon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 471,
+    "pokedex_id": 471,
+    "name": "glaceon",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 472,
+    "pokedex_id": 472,
+    "name": "gliscor",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 473,
+    "pokedex_id": 473,
+    "name": "mamoswine",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 474,
+    "pokedex_id": 474,
+    "name": "porygon-z",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 475,
+    "pokedex_id": 475,
+    "name": "gallade",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 476,
+    "pokedex_id": 476,
+    "name": "probopass",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 477,
+    "pokedex_id": 477,
+    "name": "dusknoir",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 478,
+    "pokedex_id": 478,
+    "name": "froslass",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 479,
+    "pokedex_id": 479,
+    "name": "rotom",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 480,
+    "pokedex_id": 480,
+    "name": "uxie",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 481,
+    "pokedex_id": 481,
+    "name": "mesprit",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 482,
+    "pokedex_id": 482,
+    "name": "azelf",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 483,
+    "pokedex_id": 483,
+    "name": "dialga",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 484,
+    "pokedex_id": 484,
+    "name": "palkia",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 485,
+    "pokedex_id": 485,
+    "name": "heatran",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 486,
+    "pokedex_id": 486,
+    "name": "regigigas",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 487,
+    "pokedex_id": 487,
+    "name": "giratina-altered",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 488,
+    "pokedex_id": 488,
+    "name": "cresselia",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 489,
+    "pokedex_id": 489,
+    "name": "phione",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 490,
+    "pokedex_id": 490,
+    "name": "manaphy",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 491,
+    "pokedex_id": 491,
+    "name": "darkrai",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 492,
+    "pokedex_id": 492,
+    "name": "shaymin-land",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 493,
+    "pokedex_id": 493,
+    "name": "arceus",
+    "generation": 4,
+    "rarity": 3
+  },
+  {
+    "id": 494,
+    "pokedex_id": 494,
+    "name": "victini",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 495,
+    "pokedex_id": 495,
+    "name": "snivy",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 496,
+    "pokedex_id": 496,
+    "name": "servine",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 497,
+    "pokedex_id": 497,
+    "name": "serperior",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 498,
+    "pokedex_id": 498,
+    "name": "tepig",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 499,
+    "pokedex_id": 499,
+    "name": "pignite",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 500,
+    "pokedex_id": 500,
+    "name": "emboar",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 501,
+    "pokedex_id": 501,
+    "name": "oshawott",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 502,
+    "pokedex_id": 502,
+    "name": "dewott",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 503,
+    "pokedex_id": 503,
+    "name": "samurott",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 504,
+    "pokedex_id": 504,
+    "name": "patrat",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 505,
+    "pokedex_id": 505,
+    "name": "watchog",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 506,
+    "pokedex_id": 506,
+    "name": "lillipup",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 507,
+    "pokedex_id": 507,
+    "name": "herdier",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 508,
+    "pokedex_id": 508,
+    "name": "stoutland",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 509,
+    "pokedex_id": 509,
+    "name": "purrloin",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 510,
+    "pokedex_id": 510,
+    "name": "liepard",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 511,
+    "pokedex_id": 511,
+    "name": "pansage",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 512,
+    "pokedex_id": 512,
+    "name": "simisage",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 513,
+    "pokedex_id": 513,
+    "name": "pansear",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 514,
+    "pokedex_id": 514,
+    "name": "simisear",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 515,
+    "pokedex_id": 515,
+    "name": "panpour",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 516,
+    "pokedex_id": 516,
+    "name": "simipour",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 517,
+    "pokedex_id": 517,
+    "name": "munna",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 518,
+    "pokedex_id": 518,
+    "name": "musharna",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 519,
+    "pokedex_id": 519,
+    "name": "pidove",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 520,
+    "pokedex_id": 520,
+    "name": "tranquill",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 521,
+    "pokedex_id": 521,
+    "name": "unfezant",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 522,
+    "pokedex_id": 522,
+    "name": "blitzle",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 523,
+    "pokedex_id": 523,
+    "name": "zebstrika",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 524,
+    "pokedex_id": 524,
+    "name": "roggenrola",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 525,
+    "pokedex_id": 525,
+    "name": "boldore",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 526,
+    "pokedex_id": 526,
+    "name": "gigalith",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 527,
+    "pokedex_id": 527,
+    "name": "woobat",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 528,
+    "pokedex_id": 528,
+    "name": "swoobat",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 529,
+    "pokedex_id": 529,
+    "name": "drilbur",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 530,
+    "pokedex_id": 530,
+    "name": "excadrill",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 531,
+    "pokedex_id": 531,
+    "name": "audino",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 532,
+    "pokedex_id": 532,
+    "name": "timburr",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 533,
+    "pokedex_id": 533,
+    "name": "gurdurr",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 534,
+    "pokedex_id": 534,
+    "name": "conkeldurr",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 535,
+    "pokedex_id": 535,
+    "name": "tympole",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 536,
+    "pokedex_id": 536,
+    "name": "palpitoad",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 537,
+    "pokedex_id": 537,
+    "name": "seismitoad",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 538,
+    "pokedex_id": 538,
+    "name": "throh",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 539,
+    "pokedex_id": 539,
+    "name": "sawk",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 540,
+    "pokedex_id": 540,
+    "name": "sewaddle",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 541,
+    "pokedex_id": 541,
+    "name": "swadloon",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 542,
+    "pokedex_id": 542,
+    "name": "leavanny",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 543,
+    "pokedex_id": 543,
+    "name": "venipede",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 544,
+    "pokedex_id": 544,
+    "name": "whirlipede",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 545,
+    "pokedex_id": 545,
+    "name": "scolipede",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 546,
+    "pokedex_id": 546,
+    "name": "cottonee",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 547,
+    "pokedex_id": 547,
+    "name": "whimsicott",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 548,
+    "pokedex_id": 548,
+    "name": "petilil",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 549,
+    "pokedex_id": 549,
+    "name": "lilligant",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 550,
+    "pokedex_id": 550,
+    "name": "basculin-red-striped",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 551,
+    "pokedex_id": 551,
+    "name": "sandile",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 552,
+    "pokedex_id": 552,
+    "name": "krokorok",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 553,
+    "pokedex_id": 553,
+    "name": "krookodile",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 554,
+    "pokedex_id": 554,
+    "name": "darumaka",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 555,
+    "pokedex_id": 555,
+    "name": "darmanitan-standard",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 556,
+    "pokedex_id": 556,
+    "name": "maractus",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 557,
+    "pokedex_id": 557,
+    "name": "dwebble",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 558,
+    "pokedex_id": 558,
+    "name": "crustle",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 559,
+    "pokedex_id": 559,
+    "name": "scraggy",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 560,
+    "pokedex_id": 560,
+    "name": "scrafty",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 561,
+    "pokedex_id": 561,
+    "name": "sigilyph",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 562,
+    "pokedex_id": 562,
+    "name": "yamask",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 563,
+    "pokedex_id": 563,
+    "name": "cofagrigus",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 564,
+    "pokedex_id": 564,
+    "name": "tirtouga",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 565,
+    "pokedex_id": 565,
+    "name": "carracosta",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 566,
+    "pokedex_id": 566,
+    "name": "archen",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 567,
+    "pokedex_id": 567,
+    "name": "archeops",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 568,
+    "pokedex_id": 568,
+    "name": "trubbish",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 569,
+    "pokedex_id": 569,
+    "name": "garbodor",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 570,
+    "pokedex_id": 570,
+    "name": "zorua",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 571,
+    "pokedex_id": 571,
+    "name": "zoroark",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 572,
+    "pokedex_id": 572,
+    "name": "minccino",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 573,
+    "pokedex_id": 573,
+    "name": "cinccino",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 574,
+    "pokedex_id": 574,
+    "name": "gothita",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 575,
+    "pokedex_id": 575,
+    "name": "gothorita",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 576,
+    "pokedex_id": 576,
+    "name": "gothitelle",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 577,
+    "pokedex_id": 577,
+    "name": "solosis",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 578,
+    "pokedex_id": 578,
+    "name": "duosion",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 579,
+    "pokedex_id": 579,
+    "name": "reuniclus",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 580,
+    "pokedex_id": 580,
+    "name": "ducklett",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 581,
+    "pokedex_id": 581,
+    "name": "swanna",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 582,
+    "pokedex_id": 582,
+    "name": "vanillite",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 583,
+    "pokedex_id": 583,
+    "name": "vanillish",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 584,
+    "pokedex_id": 584,
+    "name": "vanilluxe",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 585,
+    "pokedex_id": 585,
+    "name": "deerling",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 586,
+    "pokedex_id": 586,
+    "name": "sawsbuck",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 587,
+    "pokedex_id": 587,
+    "name": "emolga",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 588,
+    "pokedex_id": 588,
+    "name": "karrablast",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 589,
+    "pokedex_id": 589,
+    "name": "escavalier",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 590,
+    "pokedex_id": 590,
+    "name": "foongus",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 591,
+    "pokedex_id": 591,
+    "name": "amoonguss",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 592,
+    "pokedex_id": 592,
+    "name": "frillish",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 593,
+    "pokedex_id": 593,
+    "name": "jellicent",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 594,
+    "pokedex_id": 594,
+    "name": "alomomola",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 595,
+    "pokedex_id": 595,
+    "name": "joltik",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 596,
+    "pokedex_id": 596,
+    "name": "galvantula",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 597,
+    "pokedex_id": 597,
+    "name": "ferroseed",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 598,
+    "pokedex_id": 598,
+    "name": "ferrothorn",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 599,
+    "pokedex_id": 599,
+    "name": "klink",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 600,
+    "pokedex_id": 600,
+    "name": "klang",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 601,
+    "pokedex_id": 601,
+    "name": "klinklang",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 602,
+    "pokedex_id": 602,
+    "name": "tynamo",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 603,
+    "pokedex_id": 603,
+    "name": "eelektrik",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 604,
+    "pokedex_id": 604,
+    "name": "eelektross",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 605,
+    "pokedex_id": 605,
+    "name": "elgyem",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 606,
+    "pokedex_id": 606,
+    "name": "beheeyem",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 607,
+    "pokedex_id": 607,
+    "name": "litwick",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 608,
+    "pokedex_id": 608,
+    "name": "lampent",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 609,
+    "pokedex_id": 609,
+    "name": "chandelure",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 610,
+    "pokedex_id": 610,
+    "name": "axew",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 611,
+    "pokedex_id": 611,
+    "name": "fraxure",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 612,
+    "pokedex_id": 612,
+    "name": "haxorus",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 613,
+    "pokedex_id": 613,
+    "name": "cubchoo",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 614,
+    "pokedex_id": 614,
+    "name": "beartic",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 615,
+    "pokedex_id": 615,
+    "name": "cryogonal",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 616,
+    "pokedex_id": 616,
+    "name": "shelmet",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 617,
+    "pokedex_id": 617,
+    "name": "accelgor",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 618,
+    "pokedex_id": 618,
+    "name": "stunfisk",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 619,
+    "pokedex_id": 619,
+    "name": "mienfoo",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 620,
+    "pokedex_id": 620,
+    "name": "mienshao",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 621,
+    "pokedex_id": 621,
+    "name": "druddigon",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 622,
+    "pokedex_id": 622,
+    "name": "golett",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 623,
+    "pokedex_id": 623,
+    "name": "golurk",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 624,
+    "pokedex_id": 624,
+    "name": "pawniard",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 625,
+    "pokedex_id": 625,
+    "name": "bisharp",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 626,
+    "pokedex_id": 626,
+    "name": "bouffalant",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 627,
+    "pokedex_id": 627,
+    "name": "rufflet",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 628,
+    "pokedex_id": 628,
+    "name": "braviary",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 629,
+    "pokedex_id": 629,
+    "name": "vullaby",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 630,
+    "pokedex_id": 630,
+    "name": "mandibuzz",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 631,
+    "pokedex_id": 631,
+    "name": "heatmor",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 632,
+    "pokedex_id": 632,
+    "name": "durant",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 633,
+    "pokedex_id": 633,
+    "name": "deino",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 634,
+    "pokedex_id": 634,
+    "name": "zweilous",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 635,
+    "pokedex_id": 635,
+    "name": "hydreigon",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 636,
+    "pokedex_id": 636,
+    "name": "larvesta",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 637,
+    "pokedex_id": 637,
+    "name": "volcarona",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 638,
+    "pokedex_id": 638,
+    "name": "cobalion",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 639,
+    "pokedex_id": 639,
+    "name": "terrakion",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 640,
+    "pokedex_id": 640,
+    "name": "virizion",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 641,
+    "pokedex_id": 641,
+    "name": "tornadus-incarnate",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 642,
+    "pokedex_id": 642,
+    "name": "thundurus-incarnate",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 643,
+    "pokedex_id": 643,
+    "name": "reshiram",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 644,
+    "pokedex_id": 644,
+    "name": "zekrom",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 645,
+    "pokedex_id": 645,
+    "name": "landorus-incarnate",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 646,
+    "pokedex_id": 646,
+    "name": "kyurem",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 647,
+    "pokedex_id": 647,
+    "name": "keldeo-ordinary",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 648,
+    "pokedex_id": 648,
+    "name": "meloetta-aria",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 649,
+    "pokedex_id": 649,
+    "name": "genesect",
+    "generation": 5,
+    "rarity": 3
+  },
+  {
+    "id": 650,
+    "pokedex_id": 650,
+    "name": "chespin",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 651,
+    "pokedex_id": 651,
+    "name": "quilladin",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 652,
+    "pokedex_id": 652,
+    "name": "chesnaught",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 653,
+    "pokedex_id": 653,
+    "name": "fennekin",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 654,
+    "pokedex_id": 654,
+    "name": "braixen",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 655,
+    "pokedex_id": 655,
+    "name": "delphox",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 656,
+    "pokedex_id": 656,
+    "name": "froakie",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 657,
+    "pokedex_id": 657,
+    "name": "frogadier",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 658,
+    "pokedex_id": 658,
+    "name": "greninja",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 659,
+    "pokedex_id": 659,
+    "name": "bunnelby",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 660,
+    "pokedex_id": 660,
+    "name": "diggersby",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 661,
+    "pokedex_id": 661,
+    "name": "fletchling",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 662,
+    "pokedex_id": 662,
+    "name": "fletchinder",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 663,
+    "pokedex_id": 663,
+    "name": "talonflame",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 664,
+    "pokedex_id": 664,
+    "name": "scatterbug",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 665,
+    "pokedex_id": 665,
+    "name": "spewpa",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 666,
+    "pokedex_id": 666,
+    "name": "vivillon",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 667,
+    "pokedex_id": 667,
+    "name": "litleo",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 668,
+    "pokedex_id": 668,
+    "name": "pyroar",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 669,
+    "pokedex_id": 669,
+    "name": "flabebe",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 670,
+    "pokedex_id": 670,
+    "name": "floette",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 671,
+    "pokedex_id": 671,
+    "name": "florges",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 672,
+    "pokedex_id": 672,
+    "name": "skiddo",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 673,
+    "pokedex_id": 673,
+    "name": "gogoat",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 674,
+    "pokedex_id": 674,
+    "name": "pancham",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 675,
+    "pokedex_id": 675,
+    "name": "pangoro",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 676,
+    "pokedex_id": 676,
+    "name": "furfrou",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 677,
+    "pokedex_id": 677,
+    "name": "espurr",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 678,
+    "pokedex_id": 678,
+    "name": "meowstic-male",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 679,
+    "pokedex_id": 679,
+    "name": "honedge",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 680,
+    "pokedex_id": 680,
+    "name": "doublade",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 681,
+    "pokedex_id": 681,
+    "name": "aegislash-shield",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 682,
+    "pokedex_id": 682,
+    "name": "spritzee",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 683,
+    "pokedex_id": 683,
+    "name": "aromatisse",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 684,
+    "pokedex_id": 684,
+    "name": "swirlix",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 685,
+    "pokedex_id": 685,
+    "name": "slurpuff",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 686,
+    "pokedex_id": 686,
+    "name": "inkay",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 687,
+    "pokedex_id": 687,
+    "name": "malamar",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 688,
+    "pokedex_id": 688,
+    "name": "binacle",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 689,
+    "pokedex_id": 689,
+    "name": "barbaracle",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 690,
+    "pokedex_id": 690,
+    "name": "skrelp",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 691,
+    "pokedex_id": 691,
+    "name": "dragalge",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 692,
+    "pokedex_id": 692,
+    "name": "clauncher",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 693,
+    "pokedex_id": 693,
+    "name": "clawitzer",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 694,
+    "pokedex_id": 694,
+    "name": "helioptile",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 695,
+    "pokedex_id": 695,
+    "name": "heliolisk",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 696,
+    "pokedex_id": 696,
+    "name": "tyrunt",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 697,
+    "pokedex_id": 697,
+    "name": "tyrantrum",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 698,
+    "pokedex_id": 698,
+    "name": "amaura",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 699,
+    "pokedex_id": 699,
+    "name": "aurorus",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 700,
+    "pokedex_id": 700,
+    "name": "sylveon",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 701,
+    "pokedex_id": 701,
+    "name": "hawlucha",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 702,
+    "pokedex_id": 702,
+    "name": "dedenne",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 703,
+    "pokedex_id": 703,
+    "name": "carbink",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 704,
+    "pokedex_id": 704,
+    "name": "goomy",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 705,
+    "pokedex_id": 705,
+    "name": "sliggoo",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 706,
+    "pokedex_id": 706,
+    "name": "goodra",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 707,
+    "pokedex_id": 707,
+    "name": "klefki",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 708,
+    "pokedex_id": 708,
+    "name": "phantump",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 709,
+    "pokedex_id": 709,
+    "name": "trevenant",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 710,
+    "pokedex_id": 710,
+    "name": "pumpkaboo-average",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 711,
+    "pokedex_id": 711,
+    "name": "gourgeist-average",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 712,
+    "pokedex_id": 712,
+    "name": "bergmite",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 713,
+    "pokedex_id": 713,
+    "name": "avalugg",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 714,
+    "pokedex_id": 714,
+    "name": "noibat",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 715,
+    "pokedex_id": 715,
+    "name": "noivern",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 716,
+    "pokedex_id": 716,
+    "name": "xerneas",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 717,
+    "pokedex_id": 717,
+    "name": "yveltal",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 718,
+    "pokedex_id": 718,
+    "name": "zygarde-50",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 719,
+    "pokedex_id": 719,
+    "name": "diancie",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 720,
+    "pokedex_id": 720,
+    "name": "hoopa",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 721,
+    "pokedex_id": 721,
+    "name": "volcanion",
+    "generation": 6,
+    "rarity": 3
+  },
+  {
+    "id": 722,
+    "pokedex_id": 722,
+    "name": "rowlet",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 723,
+    "pokedex_id": 723,
+    "name": "dartrix",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 724,
+    "pokedex_id": 724,
+    "name": "decidueye",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 725,
+    "pokedex_id": 725,
+    "name": "litten",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 726,
+    "pokedex_id": 726,
+    "name": "torracat",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 727,
+    "pokedex_id": 727,
+    "name": "incineroar",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 728,
+    "pokedex_id": 728,
+    "name": "popplio",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 729,
+    "pokedex_id": 729,
+    "name": "brionne",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 730,
+    "pokedex_id": 730,
+    "name": "primarina",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 731,
+    "pokedex_id": 731,
+    "name": "pikipek",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 732,
+    "pokedex_id": 732,
+    "name": "trumbeak",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 733,
+    "pokedex_id": 733,
+    "name": "toucannon",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 734,
+    "pokedex_id": 734,
+    "name": "yungoos",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 735,
+    "pokedex_id": 735,
+    "name": "gumshoos",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 736,
+    "pokedex_id": 736,
+    "name": "grubbin",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 737,
+    "pokedex_id": 737,
+    "name": "charjabug",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 738,
+    "pokedex_id": 738,
+    "name": "vikavolt",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 739,
+    "pokedex_id": 739,
+    "name": "crabrawler",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 740,
+    "pokedex_id": 740,
+    "name": "crabominable",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 741,
+    "pokedex_id": 741,
+    "name": "oricorio-baile",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 742,
+    "pokedex_id": 742,
+    "name": "cutiefly",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 743,
+    "pokedex_id": 743,
+    "name": "ribombee",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 744,
+    "pokedex_id": 744,
+    "name": "rockruff",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 745,
+    "pokedex_id": 745,
+    "name": "lycanroc-midday",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 746,
+    "pokedex_id": 746,
+    "name": "wishiwashi-solo",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 747,
+    "pokedex_id": 747,
+    "name": "mareanie",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 748,
+    "pokedex_id": 748,
+    "name": "toxapex",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 749,
+    "pokedex_id": 749,
+    "name": "mudbray",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 750,
+    "pokedex_id": 750,
+    "name": "mudsdale",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 751,
+    "pokedex_id": 751,
+    "name": "dewpider",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 752,
+    "pokedex_id": 752,
+    "name": "araquanid",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 753,
+    "pokedex_id": 753,
+    "name": "fomantis",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 754,
+    "pokedex_id": 754,
+    "name": "lurantis",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 755,
+    "pokedex_id": 755,
+    "name": "morelull",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 756,
+    "pokedex_id": 756,
+    "name": "shiinotic",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 757,
+    "pokedex_id": 757,
+    "name": "salandit",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 758,
+    "pokedex_id": 758,
+    "name": "salazzle",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 759,
+    "pokedex_id": 759,
+    "name": "stufful",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 760,
+    "pokedex_id": 760,
+    "name": "bewear",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 761,
+    "pokedex_id": 761,
+    "name": "bounsweet",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 762,
+    "pokedex_id": 762,
+    "name": "steenee",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 763,
+    "pokedex_id": 763,
+    "name": "tsareena",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 764,
+    "pokedex_id": 764,
+    "name": "comfey",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 765,
+    "pokedex_id": 765,
+    "name": "oranguru",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 766,
+    "pokedex_id": 766,
+    "name": "passimian",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 767,
+    "pokedex_id": 767,
+    "name": "wimpod",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 768,
+    "pokedex_id": 768,
+    "name": "golisopod",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 769,
+    "pokedex_id": 769,
+    "name": "sandygast",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 770,
+    "pokedex_id": 770,
+    "name": "palossand",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 771,
+    "pokedex_id": 771,
+    "name": "pyukumuku",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 772,
+    "pokedex_id": 772,
+    "name": "type-null",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 773,
+    "pokedex_id": 773,
+    "name": "silvally",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 774,
+    "pokedex_id": 774,
+    "name": "minior-red-meteor",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 775,
+    "pokedex_id": 775,
+    "name": "komala",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 776,
+    "pokedex_id": 776,
+    "name": "turtonator",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 777,
+    "pokedex_id": 777,
+    "name": "togedemaru",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 778,
+    "pokedex_id": 778,
+    "name": "mimikyu-disguised",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 779,
+    "pokedex_id": 779,
+    "name": "bruxish",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 780,
+    "pokedex_id": 780,
+    "name": "drampa",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 781,
+    "pokedex_id": 781,
+    "name": "dhelmise",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 782,
+    "pokedex_id": 782,
+    "name": "jangmo-o",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 783,
+    "pokedex_id": 783,
+    "name": "hakamo-o",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 784,
+    "pokedex_id": 784,
+    "name": "kommo-o",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 785,
+    "pokedex_id": 785,
+    "name": "tapu-koko",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 786,
+    "pokedex_id": 786,
+    "name": "tapu-lele",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 787,
+    "pokedex_id": 787,
+    "name": "tapu-bulu",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 788,
+    "pokedex_id": 788,
+    "name": "tapu-fini",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 789,
+    "pokedex_id": 789,
+    "name": "cosmog",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 790,
+    "pokedex_id": 790,
+    "name": "cosmoem",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 791,
+    "pokedex_id": 791,
+    "name": "solgaleo",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 792,
+    "pokedex_id": 792,
+    "name": "lunala",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 793,
+    "pokedex_id": 793,
+    "name": "nihilego",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 794,
+    "pokedex_id": 794,
+    "name": "buzzwole",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 795,
+    "pokedex_id": 795,
+    "name": "pheromosa",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 796,
+    "pokedex_id": 796,
+    "name": "xurkitree",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 797,
+    "pokedex_id": 797,
+    "name": "celesteela",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 798,
+    "pokedex_id": 798,
+    "name": "kartana",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 799,
+    "pokedex_id": 799,
+    "name": "guzzlord",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 800,
+    "pokedex_id": 800,
+    "name": "necrozma",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 801,
+    "pokedex_id": 801,
+    "name": "magearna",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 802,
+    "pokedex_id": 802,
+    "name": "marshadow",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 803,
+    "pokedex_id": 803,
+    "name": "poipole",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 804,
+    "pokedex_id": 804,
+    "name": "naganadel",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 805,
+    "pokedex_id": 805,
+    "name": "stakataka",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 806,
+    "pokedex_id": 806,
+    "name": "blacephalon",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 807,
+    "pokedex_id": 807,
+    "name": "zeraora",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 808,
+    "pokedex_id": 808,
+    "name": "meltan",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 809,
+    "pokedex_id": 809,
+    "name": "melmetal",
+    "generation": 7,
+    "rarity": 3
+  },
+  {
+    "id": 810,
+    "pokedex_id": 810,
+    "name": "grookey",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 811,
+    "pokedex_id": 811,
+    "name": "thwackey",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 812,
+    "pokedex_id": 812,
+    "name": "rillaboom",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 813,
+    "pokedex_id": 813,
+    "name": "scorbunny",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 814,
+    "pokedex_id": 814,
+    "name": "raboot",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 815,
+    "pokedex_id": 815,
+    "name": "cinderace",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 816,
+    "pokedex_id": 816,
+    "name": "sobble",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 817,
+    "pokedex_id": 817,
+    "name": "drizzile",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 818,
+    "pokedex_id": 818,
+    "name": "inteleon",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 819,
+    "pokedex_id": 819,
+    "name": "skwovet",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 820,
+    "pokedex_id": 820,
+    "name": "greedent",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 821,
+    "pokedex_id": 821,
+    "name": "rookidee",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 822,
+    "pokedex_id": 822,
+    "name": "corvisquire",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 823,
+    "pokedex_id": 823,
+    "name": "corviknight",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 824,
+    "pokedex_id": 824,
+    "name": "blipbug",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 825,
+    "pokedex_id": 825,
+    "name": "dottler",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 826,
+    "pokedex_id": 826,
+    "name": "orbeetle",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 827,
+    "pokedex_id": 827,
+    "name": "nickit",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 828,
+    "pokedex_id": 828,
+    "name": "thievul",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 829,
+    "pokedex_id": 829,
+    "name": "gossifleur",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 830,
+    "pokedex_id": 830,
+    "name": "eldegoss",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 831,
+    "pokedex_id": 831,
+    "name": "wooloo",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 832,
+    "pokedex_id": 832,
+    "name": "dubwool",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 833,
+    "pokedex_id": 833,
+    "name": "chewtle",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 834,
+    "pokedex_id": 834,
+    "name": "drednaw",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 835,
+    "pokedex_id": 835,
+    "name": "yamper",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 836,
+    "pokedex_id": 836,
+    "name": "boltund",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 837,
+    "pokedex_id": 837,
+    "name": "rolycoly",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 838,
+    "pokedex_id": 838,
+    "name": "carkol",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 839,
+    "pokedex_id": 839,
+    "name": "coalossal",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 840,
+    "pokedex_id": 840,
+    "name": "applin",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 841,
+    "pokedex_id": 841,
+    "name": "flapple",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 842,
+    "pokedex_id": 842,
+    "name": "appletun",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 843,
+    "pokedex_id": 843,
+    "name": "silicobra",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 844,
+    "pokedex_id": 844,
+    "name": "sandaconda",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 845,
+    "pokedex_id": 845,
+    "name": "cramorant",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 846,
+    "pokedex_id": 846,
+    "name": "arrokuda",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 847,
+    "pokedex_id": 847,
+    "name": "barraskewda",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 848,
+    "pokedex_id": 848,
+    "name": "toxel",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 849,
+    "pokedex_id": 849,
+    "name": "toxtricity-amped",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 850,
+    "pokedex_id": 850,
+    "name": "sizzlipede",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 851,
+    "pokedex_id": 851,
+    "name": "centiskorch",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 852,
+    "pokedex_id": 852,
+    "name": "clobbopus",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 853,
+    "pokedex_id": 853,
+    "name": "grapploct",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 854,
+    "pokedex_id": 854,
+    "name": "sinistea",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 855,
+    "pokedex_id": 855,
+    "name": "polteageist",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 856,
+    "pokedex_id": 856,
+    "name": "hatenna",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 857,
+    "pokedex_id": 857,
+    "name": "hattrem",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 858,
+    "pokedex_id": 858,
+    "name": "hatterene",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 859,
+    "pokedex_id": 859,
+    "name": "impidimp",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 860,
+    "pokedex_id": 860,
+    "name": "morgrem",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 861,
+    "pokedex_id": 861,
+    "name": "grimmsnarl",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 862,
+    "pokedex_id": 862,
+    "name": "obstagoon",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 863,
+    "pokedex_id": 863,
+    "name": "perrserker",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 864,
+    "pokedex_id": 864,
+    "name": "cursola",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 865,
+    "pokedex_id": 865,
+    "name": "sirfetchd",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 866,
+    "pokedex_id": 866,
+    "name": "mr-rime",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 867,
+    "pokedex_id": 867,
+    "name": "runerigus",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 868,
+    "pokedex_id": 868,
+    "name": "milcery",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 869,
+    "pokedex_id": 869,
+    "name": "alcremie",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 870,
+    "pokedex_id": 870,
+    "name": "falinks",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 871,
+    "pokedex_id": 871,
+    "name": "pincurchin",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 872,
+    "pokedex_id": 872,
+    "name": "snom",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 873,
+    "pokedex_id": 873,
+    "name": "frosmoth",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 874,
+    "pokedex_id": 874,
+    "name": "stonjourner",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 875,
+    "pokedex_id": 875,
+    "name": "eiscue-ice",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 876,
+    "pokedex_id": 876,
+    "name": "indeedee-male",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 877,
+    "pokedex_id": 877,
+    "name": "morpeko-full-belly",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 878,
+    "pokedex_id": 878,
+    "name": "cufant",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 879,
+    "pokedex_id": 879,
+    "name": "copperajah",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 880,
+    "pokedex_id": 880,
+    "name": "dracozolt",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 881,
+    "pokedex_id": 881,
+    "name": "arctozolt",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 882,
+    "pokedex_id": 882,
+    "name": "dracovish",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 883,
+    "pokedex_id": 883,
+    "name": "arctovish",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 884,
+    "pokedex_id": 884,
+    "name": "duraludon",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 885,
+    "pokedex_id": 885,
+    "name": "dreepy",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 886,
+    "pokedex_id": 886,
+    "name": "drakloak",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 887,
+    "pokedex_id": 887,
+    "name": "dragapult",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 888,
+    "pokedex_id": 888,
+    "name": "zacian",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 889,
+    "pokedex_id": 889,
+    "name": "zamazenta",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 890,
+    "pokedex_id": 890,
+    "name": "eternatus",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 891,
+    "pokedex_id": 891,
+    "name": "kubfu",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 892,
+    "pokedex_id": 892,
+    "name": "urshifu-single-strike",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 893,
+    "pokedex_id": 893,
+    "name": "zarude",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 894,
+    "pokedex_id": 894,
+    "name": "regieleki",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 895,
+    "pokedex_id": 895,
+    "name": "regidrago",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 896,
+    "pokedex_id": 896,
+    "name": "glastrier",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 897,
+    "pokedex_id": 897,
+    "name": "spectrier",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 898,
+    "pokedex_id": 898,
+    "name": "calyrex",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 899,
+    "pokedex_id": 899,
+    "name": "wyrdeer",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 900,
+    "pokedex_id": 900,
+    "name": "kleavor",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 901,
+    "pokedex_id": 901,
+    "name": "ursaluna",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 902,
+    "pokedex_id": 902,
+    "name": "basculegion-male",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 903,
+    "pokedex_id": 903,
+    "name": "sneasler",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 904,
+    "pokedex_id": 904,
+    "name": "overqwil",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 905,
+    "pokedex_id": 905,
+    "name": "enamorus-incarnate",
+    "generation": 8,
+    "rarity": 3
+  },
+  {
+    "id": 906,
+    "pokedex_id": 906,
+    "name": "sprigatito",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 907,
+    "pokedex_id": 907,
+    "name": "floragato",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 908,
+    "pokedex_id": 908,
+    "name": "meowscarada",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 909,
+    "pokedex_id": 909,
+    "name": "fuecoco",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 910,
+    "pokedex_id": 910,
+    "name": "crocalor",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 911,
+    "pokedex_id": 911,
+    "name": "skeledirge",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 912,
+    "pokedex_id": 912,
+    "name": "quaxly",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 913,
+    "pokedex_id": 913,
+    "name": "quaxwell",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 914,
+    "pokedex_id": 914,
+    "name": "quaquaval",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 915,
+    "pokedex_id": 915,
+    "name": "lechonk",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 916,
+    "pokedex_id": 916,
+    "name": "oinkologne-male",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 917,
+    "pokedex_id": 917,
+    "name": "tarountula",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 918,
+    "pokedex_id": 918,
+    "name": "spidops",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 919,
+    "pokedex_id": 919,
+    "name": "nymble",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 920,
+    "pokedex_id": 920,
+    "name": "lokix",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 921,
+    "pokedex_id": 921,
+    "name": "pawmi",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 922,
+    "pokedex_id": 922,
+    "name": "pawmo",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 923,
+    "pokedex_id": 923,
+    "name": "pawmot",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 924,
+    "pokedex_id": 924,
+    "name": "tandemaus",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 925,
+    "pokedex_id": 925,
+    "name": "maushold-family-of-four",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 926,
+    "pokedex_id": 926,
+    "name": "fidough",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 927,
+    "pokedex_id": 927,
+    "name": "dachsbun",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 928,
+    "pokedex_id": 928,
+    "name": "smoliv",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 929,
+    "pokedex_id": 929,
+    "name": "dolliv",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 930,
+    "pokedex_id": 930,
+    "name": "arboliva",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 931,
+    "pokedex_id": 931,
+    "name": "squawkabilly-green-plumage",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 932,
+    "pokedex_id": 932,
+    "name": "nacli",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 933,
+    "pokedex_id": 933,
+    "name": "naclstack",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 934,
+    "pokedex_id": 934,
+    "name": "garganacl",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 935,
+    "pokedex_id": 935,
+    "name": "charcadet",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 936,
+    "pokedex_id": 936,
+    "name": "armarouge",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 937,
+    "pokedex_id": 937,
+    "name": "ceruledge",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 938,
+    "pokedex_id": 938,
+    "name": "tadbulb",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 939,
+    "pokedex_id": 939,
+    "name": "bellibolt",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 940,
+    "pokedex_id": 940,
+    "name": "wattrel",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 941,
+    "pokedex_id": 941,
+    "name": "kilowattrel",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 942,
+    "pokedex_id": 942,
+    "name": "maschiff",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 943,
+    "pokedex_id": 943,
+    "name": "mabosstiff",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 944,
+    "pokedex_id": 944,
+    "name": "shroodle",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 945,
+    "pokedex_id": 945,
+    "name": "grafaiai",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 946,
+    "pokedex_id": 946,
+    "name": "bramblin",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 947,
+    "pokedex_id": 947,
+    "name": "brambleghast",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 948,
+    "pokedex_id": 948,
+    "name": "toedscool",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 949,
+    "pokedex_id": 949,
+    "name": "toedscruel",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 950,
+    "pokedex_id": 950,
+    "name": "klawf",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 951,
+    "pokedex_id": 951,
+    "name": "capsakid",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 952,
+    "pokedex_id": 952,
+    "name": "scovillain",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 953,
+    "pokedex_id": 953,
+    "name": "rellor",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 954,
+    "pokedex_id": 954,
+    "name": "rabsca",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 955,
+    "pokedex_id": 955,
+    "name": "flittle",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 956,
+    "pokedex_id": 956,
+    "name": "espathra",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 957,
+    "pokedex_id": 957,
+    "name": "tinkatink",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 958,
+    "pokedex_id": 958,
+    "name": "tinkatuff",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 959,
+    "pokedex_id": 959,
+    "name": "tinkaton",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 960,
+    "pokedex_id": 960,
+    "name": "wiglett",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 961,
+    "pokedex_id": 961,
+    "name": "wugtrio",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 962,
+    "pokedex_id": 962,
+    "name": "bombirdier",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 963,
+    "pokedex_id": 963,
+    "name": "finizen",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 964,
+    "pokedex_id": 964,
+    "name": "palafin-zero",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 965,
+    "pokedex_id": 965,
+    "name": "varoom",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 966,
+    "pokedex_id": 966,
+    "name": "revavroom",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 967,
+    "pokedex_id": 967,
+    "name": "cyclizar",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 968,
+    "pokedex_id": 968,
+    "name": "orthworm",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 969,
+    "pokedex_id": 969,
+    "name": "glimmet",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 970,
+    "pokedex_id": 970,
+    "name": "glimmora",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 971,
+    "pokedex_id": 971,
+    "name": "greavard",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 972,
+    "pokedex_id": 972,
+    "name": "houndstone",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 973,
+    "pokedex_id": 973,
+    "name": "flamigo",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 974,
+    "pokedex_id": 974,
+    "name": "cetoddle",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 975,
+    "pokedex_id": 975,
+    "name": "cetitan",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 976,
+    "pokedex_id": 976,
+    "name": "veluza",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 977,
+    "pokedex_id": 977,
+    "name": "dondozo",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 978,
+    "pokedex_id": 978,
+    "name": "tatsugiri-curly",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 979,
+    "pokedex_id": 979,
+    "name": "annihilape",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 980,
+    "pokedex_id": 980,
+    "name": "clodsire",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 981,
+    "pokedex_id": 981,
+    "name": "farigiraf",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 982,
+    "pokedex_id": 982,
+    "name": "dudunsparce-two-segment",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 983,
+    "pokedex_id": 983,
+    "name": "kingambit",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 984,
+    "pokedex_id": 984,
+    "name": "great-tusk",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 985,
+    "pokedex_id": 985,
+    "name": "scream-tail",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 986,
+    "pokedex_id": 986,
+    "name": "brute-bonnet",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 987,
+    "pokedex_id": 987,
+    "name": "flutter-mane",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 988,
+    "pokedex_id": 988,
+    "name": "slither-wing",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 989,
+    "pokedex_id": 989,
+    "name": "sandy-shocks",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 990,
+    "pokedex_id": 990,
+    "name": "iron-treads",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 991,
+    "pokedex_id": 991,
+    "name": "iron-bundle",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 992,
+    "pokedex_id": 992,
+    "name": "iron-hands",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 993,
+    "pokedex_id": 993,
+    "name": "iron-jugulis",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 994,
+    "pokedex_id": 994,
+    "name": "iron-moth",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 995,
+    "pokedex_id": 995,
+    "name": "iron-thorns",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 996,
+    "pokedex_id": 996,
+    "name": "frigibax",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 997,
+    "pokedex_id": 997,
+    "name": "arctibax",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 998,
+    "pokedex_id": 998,
+    "name": "baxcalibur",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 999,
+    "pokedex_id": 999,
+    "name": "gimmighoul",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1000,
+    "pokedex_id": 1000,
+    "name": "gholdengo",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1001,
+    "pokedex_id": 1001,
+    "name": "wo-chien",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1002,
+    "pokedex_id": 1002,
+    "name": "chien-pao",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1003,
+    "pokedex_id": 1003,
+    "name": "ting-lu",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1004,
+    "pokedex_id": 1004,
+    "name": "chi-yu",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1005,
+    "pokedex_id": 1005,
+    "name": "roaring-moon",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1006,
+    "pokedex_id": 1006,
+    "name": "iron-valiant",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1007,
+    "pokedex_id": 1007,
+    "name": "koraidon",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1008,
+    "pokedex_id": 1008,
+    "name": "miraidon",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1009,
+    "pokedex_id": 1009,
+    "name": "walking-wake",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1010,
+    "pokedex_id": 1010,
+    "name": "iron-leaves",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1011,
+    "pokedex_id": 1011,
+    "name": "dipplin",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1012,
+    "pokedex_id": 1012,
+    "name": "poltchageist",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1013,
+    "pokedex_id": 1013,
+    "name": "sinistcha",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1014,
+    "pokedex_id": 1014,
+    "name": "okidogi",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1015,
+    "pokedex_id": 1015,
+    "name": "munkidori",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1016,
+    "pokedex_id": 1016,
+    "name": "fezandipiti",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1017,
+    "pokedex_id": 1017,
+    "name": "ogerpon",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1018,
+    "pokedex_id": 1018,
+    "name": "archaludon",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1019,
+    "pokedex_id": 1019,
+    "name": "hydrapple",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1020,
+    "pokedex_id": 1020,
+    "name": "gouging-fire",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1021,
+    "pokedex_id": 1021,
+    "name": "raging-bolt",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1022,
+    "pokedex_id": 1022,
+    "name": "iron-boulder",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1023,
+    "pokedex_id": 1023,
+    "name": "iron-crown",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1024,
+    "pokedex_id": 1024,
+    "name": "terapagos",
+    "generation": 9,
+    "rarity": 3
+  },
+  {
+    "id": 1025,
+    "pokedex_id": 1025,
+    "name": "pecharunt",
+    "generation": 9,
+    "rarity": 3
+  }
+]
