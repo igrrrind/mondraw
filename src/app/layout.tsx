@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${fredoka.variable} antialiased bg-pd-bg text-pd-text h-screen overflow-hidden`}
+        className={`${nunito.variable} ${fredoka.variable} antialiased bg-pd-bg text-pd-text min-h-screen overflow-y-auto overflow-x-hidden`}
       >
         {children}
       </body>

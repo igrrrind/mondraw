@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import PusherClient from 'pusher-js';
 import { PresenceChannel } from 'pusher-js';
 import { RoomState, Player, Pokemon } from '@/types';
@@ -12,6 +12,7 @@ import { Loader2, Users, Timer, Trophy } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface GameClientProps {
     roomId: string;
@@ -28,6 +29,7 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
     const [pusher, setPusher] = useState<PusherClient | null>(null);
     const [revealedWord, setRevealedWord] = useState<string>('');
     const [revealedId, setRevealedId] = useState<number>(25);
+    const [mobilePanel, setMobilePanel] = useState<'guesses' | 'chat'>('guesses');
 
     const currentPlayer = gameState.players[playerId];
     const isDrawer = currentPlayer?.isDrawer || false;
@@ -254,6 +256,46 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
         }
     };
 
+    const leaderboardPanel = (
+        <div className="pd-card p-3 md:p-5 shadow-sm flex flex-col min-h-0 h-full">
+            <div className="flex items-center justify-between mb-2 md:mb-3">
+                <h3 className="text-pd-text font-black text-[10px] md:text-xs tracking-widest flex items-center gap-2 md:gap-3 uppercase">
+                    <Users className="w-3 h-3 md:w-4 md:h-4 text-pd-red" />
+                    Leaderboard
+                </h3>
+                <div className="px-1.5 py-0.5 bg-pd-green/15 rounded-full text-[8px] md:text-[10px] font-black text-pd-green uppercase">Live</div>
+            </div>
+            <div className="flex-1 space-y-1 overflow-y-auto pr-1">
+                {Object.values(gameState.players).sort((a, b) => b.score - a.score).map((p, idx) => (
+                    <div
+                        key={p.id}
+                        className={cn(
+                            "flex justify-between items-center p-2 md:p-3 rounded-lg md:rounded-xl transition-all duration-300",
+                            p.id === playerId ? "bg-pd-sky/10" : "bg-pd-surface-alt/50 hover:bg-pd-surface-alt"
+                        )}
+                    >
+                        <div className="flex items-center gap-2 md:gap-3 overflow-hidden">
+                            <div className={cn(
+                                "w-5 h-5 md:w-6 md:h-6 rounded-lg flex items-center justify-center text-[9px] md:text-[10px] font-black shrink-0",
+                                idx === 0 ? "bg-pd-honey text-white" : "bg-pd-surface-alt text-pd-text-muted"
+                            )}>
+                                {idx + 1}
+                            </div>
+                            <span className="text-pd-text font-bold truncate text-xs md:text-sm flex items-center gap-1.5 md:gap-2">
+                                {p.isDrawer && <span className="text-pd-sky text-[10px] md:text-xs">✏️</span>}
+                                <span className={cn(p.id === playerId && "text-pd-sky")}>{p.name}</span>
+                            </span>
+                        </div>
+                        <div className="flex flex-col items-end shrink-0 ml-2">
+                            <span className="text-pd-honey font-black font-mono text-xs md:text-sm leading-none">{p.score}</span>
+                            <span className="text-[7px] md:text-[8px] text-pd-text-muted font-black uppercase tracking-widest leading-none mt-0.5">PTS</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+
     if (!playerId) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen bg-pd-bg text-pd-text font-sans">
@@ -269,9 +311,13 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
             <header className="flex flex-wrap justify-between items-center gap-2 bg-pd-surface rounded-xl p-2 md:p-4 mb-2 md:mb-4 shadow-sm shrink-0">
                 <div className="flex items-center gap-2 md:gap-4">
                     <Link href="/">
-                        <h1 className="text-base md:text-2xl font-black text-pd-text">
-                            Poké<span className="text-pd-red">Draw</span>
-                        </h1>
+                        <Image
+                            src="/logo2.png"
+                            alt="PokéDraw"
+                            width={120}
+                            height={40}
+                            className="h-6 md:h-10 w-auto"
+                        />
                     </Link>
                     <div className="bg-pd-surface-alt px-1.5 md:px-3 py-1 rounded-lg text-pd-text-muted font-mono text-[10px] md:text-sm flex items-center gap-1 md:gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-pd-green animate-pulse" />
@@ -295,8 +341,8 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
             {/* Main Game Area */}
             <div className="flex flex-col lg:flex-row gap-2 md:gap-4 flex-1 min-h-0">
 
-                <div className="flex-1 flex flex-col min-w-0 min-h-0 relative">
-                    <div className="flex-1 relative w-full overflow-hidden min-h-0">
+                <div className="flex-1 flex flex-col min-w-0 min-h-0 relative items-center justify-center">
+                    <div className="relative w-full overflow-hidden shrink-0 bg-pd-surface rounded-2xl shadow-sm" style={{ aspectRatio: '16/9', maxHeight: 'calc(100vh - 300px)', maxWidth: 'calc((100vh - 300px) * 16 / 9)' }}>
                         {gameState.status === 'LOBBY' ? (
                             <div className="absolute inset-0 pd-card flex flex-col items-center justify-center text-center p-8 animate-phase-in">
                                 <Users className="w-24 h-24 text-pd-sky mb-6 opacity-20" />
@@ -314,30 +360,32 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
                                 </h2>
 
                                 {isDrawer ? (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl z-20">
-                                        {gameState.wordOptions?.map((pokemon) => (
-                                            <button
-                                                key={pokemon.id}
-                                                onClick={() => handleSelectPokemon(pokemon.name)}
-                                                className="group flex flex-col items-center p-6 bg-pd-surface-alt rounded-2xl transition-all hover:bg-pd-surface-alt/70 hover:scale-105 active:scale-95 shadow-sm"
-                                            >
-                                                {gameState.config.showReference !== false && (
-                                                    <div className="w-32 h-32 md:w-40 md:h-40 mb-4 relative group-hover:rotate-3 transition-transform">
-                                                        <img
-                                                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.pokedex_id}.png`}
-                                                            alt={pokemon.name}
-                                                            className="w-full h-full object-contain"
-                                                        />
+                                    <div className="w-full max-w-2xl max-h-[70vh] md:max-h-[60vh] overflow-y-auto px-2 z-20">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                                            {gameState.wordOptions?.map((pokemon) => (
+                                                <button
+                                                    key={pokemon.id}
+                                                    onClick={() => handleSelectPokemon(pokemon.name)}
+                                                    className="group flex flex-col items-center p-4 md:p-6 bg-pd-surface-alt rounded-2xl transition-all hover:bg-pd-surface-alt/70 hover:scale-[1.02] active:scale-95 shadow-sm"
+                                                >
+                                                    {gameState.config.showReference !== false && (
+                                                        <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-3 md:mb-4 relative group-hover:rotate-3 transition-transform">
+                                                            <img
+                                                                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.pokedex_id}.png`}
+                                                                alt={pokemon.name}
+                                                                className="w-full h-full object-contain"
+                                                            />
+                                                        </div>
+                                                    )}
+                                                    <span className="text-xl md:text-2xl lg:text-3xl font-black text-pd-text uppercase tracking-tight group-hover:text-pd-sky transition-colors">
+                                                        {pokemon.name}
+                                                    </span>
+                                                    <div className="mt-2 px-3 py-1 bg-pd-sky/10 rounded-full text-pd-sky text-xs md:text-sm font-bold font-mono">
+                                                        GENERATION {pokemon.generation}
                                                     </div>
-                                                )}
-                                                <span className="text-2xl md:text-3xl font-black text-pd-text uppercase tracking-tight group-hover:text-pd-sky transition-colors">
-                                                    {pokemon.name}
-                                                </span>
-                                                <div className="mt-2 px-3 py-1 bg-pd-sky/10 rounded-full text-pd-sky text-sm font-bold font-mono">
-                                                    GENERATION {pokemon.generation}
-                                                </div>
-                                            </button>
-                                        ))}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
                                 ) : (
                                     <div className="space-y-6 animate-phase-in">
@@ -428,7 +476,7 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
 
                     {/* Timer Bar */}
                     {gameState.status !== 'LOBBY' && gameState.status !== 'GAME_OVER' && (
-                        <div className="w-full h-2 bg-pd-surface-alt rounded-full mt-3 md:mt-4 overflow-hidden shrink-0 animate-phase-in">
+                        <div className="w-full h-2 bg-pd-surface-alt rounded-full mt-3 md:mt-4 overflow-hidden shrink-0 animate-phase-in" style={{ maxWidth: 'calc((100vh - 300px) * 16 / 9)' }}>
                             <div
                                 className={cn(
                                     "h-full transition-all duration-1000 ease-linear rounded-full",
@@ -443,54 +491,59 @@ export function GameClient({ roomId, initialState, playerName }: GameClientProps
                             />
                         </div>
                     )}
-                </div>
 
-                {/* Right / Bottom: Sidebar */}
-                <div className="w-full lg:w-80 xl:w-96 flex flex-col gap-2 md:gap-4 shrink-0 h-[320px] lg:h-full animate-phase-in">
-
-                    {/* Leaderboard */}
-                    <div className="pd-card p-3 md:p-5 shadow-sm flex flex-col min-h-0 h-2/5 lg:h-1/3">
-                        <div className="flex items-center justify-between mb-2 md:mb-3">
-                            <h3 className="text-pd-text font-black text-[10px] md:text-xs tracking-widest flex items-center gap-2 md:gap-3 uppercase">
-                                <Users className="w-3 h-3 md:w-4 md:h-4 text-pd-red" />
-                                Leaderboard
-                            </h3>
-                            <div className="px-1.5 py-0.5 bg-pd-green/15 rounded-full text-[8px] md:text-[10px] font-black text-pd-green uppercase">Live</div>
+                    {/* Desktop: Guesses + Chat below canvas */}
+                    <div className="hidden lg:flex gap-2 md:gap-4 mt-2 md:mt-3 h-1/3 min-h-[120px] max-h-[280px] shrink-0 w-full" style={{ maxWidth: 'calc((100vh - 300px) * 16 / 9)' }}>
+                        <div className="flex-1 min-h-0 overflow-hidden shadow-sm">
+                            <Chatbox messages={messages} onSendMessage={handleSendMessage} isDrawer={isDrawer} title="Guesses" showInput={false} />
                         </div>
-                        <div className="flex-1 space-y-1 overflow-y-auto pr-1">
-                            {Object.values(gameState.players).sort((a, b) => b.score - a.score).map((p, idx) => (
-                                <div
-                                    key={p.id}
+                        <div className="flex-1 min-h-0 overflow-hidden shadow-sm">
+                            <Chatbox messages={messages} onSendMessage={handleSendMessage} isDrawer={isDrawer} title="Chat" />
+                        </div>
+                    </div>
+
+                    {/* Mobile: Leaderboard + tabbed panel below canvas */}
+                    <div className="lg:hidden flex gap-2 md:gap-4 mt-2 md:mt-3 h-2/5 min-h-[140px] max-h-[320px] shrink-0 w-full" style={{ maxWidth: 'calc((100vh - 300px) * 16 / 9)' }}>
+                        <div className="w-1/2 min-h-0 overflow-hidden shadow-sm">
+                            {leaderboardPanel}
+                        </div>
+                        <div className="flex-1 min-h-0 flex flex-col">
+                            <div className="flex gap-2 mb-2">
+                                <button
+                                    type="button"
+                                    onClick={() => setMobilePanel('guesses')}
                                     className={cn(
-                                        "flex justify-between items-center p-2 md:p-3 rounded-lg md:rounded-xl transition-all duration-300",
-                                        p.id === playerId ? "bg-pd-sky/10" : "bg-pd-surface-alt/50 hover:bg-pd-surface-alt"
+                                        "flex-1 px-3 py-2 rounded-xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-colors",
+                                        mobilePanel === 'guesses' ? "bg-pd-sky text-white" : "bg-pd-surface-alt text-pd-text-muted"
                                     )}
                                 >
-                                    <div className="flex items-center gap-2 md:gap-3 overflow-hidden">
-                                        <div className={cn(
-                                            "w-5 h-5 md:w-6 md:h-6 rounded-lg flex items-center justify-center text-[9px] md:text-[10px] font-black shrink-0",
-                                            idx === 0 ? "bg-pd-honey text-white" : "bg-pd-surface-alt text-pd-text-muted"
-                                        )}>
-                                            {idx + 1}
-                                        </div>
-                                        <span className="text-pd-text font-bold truncate text-xs md:text-sm flex items-center gap-1.5 md:gap-2">
-                                            {p.isDrawer && <span className="text-pd-sky text-[10px] md:text-xs">✏️</span>}
-                                            <span className={cn(p.id === playerId && "text-pd-sky")}>{p.name}</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex flex-col items-end shrink-0 ml-2">
-                                        <span className="text-pd-honey font-black font-mono text-xs md:text-sm leading-none">{p.score}</span>
-                                        <span className="text-[7px] md:text-[8px] text-pd-text-muted font-black uppercase tracking-widest leading-none mt-0.5">PTS</span>
-                                    </div>
-                                </div>
-                            ))}
+                                    Guesses
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setMobilePanel('chat')}
+                                    className={cn(
+                                        "flex-1 px-3 py-2 rounded-xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-colors",
+                                        mobilePanel === 'chat' ? "bg-pd-sky text-white" : "bg-pd-surface-alt text-pd-text-muted"
+                                    )}
+                                >
+                                    Chat
+                                </button>
+                            </div>
+                            <div className="flex-1 min-h-0 overflow-hidden shadow-sm">
+                                {mobilePanel === 'guesses' ? (
+                                    <Chatbox messages={messages} onSendMessage={handleSendMessage} isDrawer={isDrawer} title="Guesses" showInput={false} />
+                                ) : (
+                                    <Chatbox messages={messages} onSendMessage={handleSendMessage} isDrawer={isDrawer} title="Chat" />
+                                )}
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Chatbox */}
-                    <div className="flex-1 min-h-0 overflow-hidden shadow-sm">
-                        <Chatbox messages={messages} onSendMessage={handleSendMessage} isDrawer={isDrawer} />
-                    </div>
+                {/* Desktop: Leaderboard sidebar */}
+                <div className="hidden lg:flex lg:w-80 xl:w-76 flex-col shrink-0 h-full animate-phase-in">
+                    {leaderboardPanel}
                 </div>
             </div>
         </div>

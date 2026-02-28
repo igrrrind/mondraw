@@ -1,6 +1,6 @@
 import { redis } from '@/lib/redis';
 import { RoomState } from '@/types';
-import { GameClient } from '@/components/GameClient';
+import { GameClient2 } from '@/components/GameClient2';
 import { redirect } from 'next/navigation';
 import { ClientOnlyWrapper } from '@/components/ClientOnlyWrapper';
 
@@ -19,7 +19,7 @@ export default async function RoomPage({ params }: { params: { id: string } }) {
 
     return (
         <ClientOnlyWrapper>
-            <GameClient
+            <GameClient2
                 roomId={roomId}
                 initialState={initialState}
                 playerName="Player1" // We map this inside the client from localStorage usually since Next Server doesn't know localstorage

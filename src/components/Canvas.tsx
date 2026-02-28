@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { DrawPoint } from '@/types';
-import { Eraser, Pencil, Trash2, Undo2, Redo2, PaintBucket } from 'lucide-react';
+import { Eraser, Pencil, Trash2, Undo2, Redo2, PaintBucket, Plus, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/utils/cn';
 
@@ -10,12 +10,21 @@ interface CanvasProps {
     pusher: any;
 }
 
-const COLORS = [
-    '#000000', '#EF4444', '#3B82F6', '#10B981', '#F59E0B',
-    '#8B5CF6', '#FFFFFF', '#EC4899', '#06B6D4', '#84CC16',
-    '#F97316', '#78350F', '#64748B', '#FFD700'
+export const COLORS = [
+    '#000000', '#4B5563', '#9CA3AF', '#FFFFFF',
+    '#EF4444', '#F97316', '#F59E0B', '#EAB308',
+    '#84CC16', '#22C55E', '#10B981', '#14B8A6',
+    '#06B6D4', '#0EA5E9', '#38BDF8', '#3B82F6',
+    '#6366F1', '#8B5CF6', '#A855F7', '#D946EF',
+    '#EC4899', '#F43F5E', '#FDA4AF', '#9D174D',
+    '#78350F', '#92400E', '#B45309', '#D97706'
 ];
-const SIZES = [2, 5, 8, 12, 20, 35, 60];
+
+const BASIC_COLORS = [
+    '#000000', '#EF4444', '#3B82F6', '#10B981', '#F59E0B', '#FFFFFF'
+];
+
+export const SIZES = [2, 8, 20, 40];
 
 export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -24,6 +33,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
     const [color, setColor] = useState(COLORS[0]);
     const [size, setSize] = useState(SIZES[1]);
     const [mode, setMode] = useState<'draw' | 'erase' | 'fill'>('draw');
+    const [showColorModal, setShowColorModal] = useState(false);
 
     // Throttling and History state
     const lastPointRef = useRef<{ x: number, y: number } | null>(null);
@@ -266,31 +276,10 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
             const canvas = canvasRef.current;
             if (!container || !canvas) return;
 
-            // Save current image data before resizing
             const ctx = canvas.getContext('2d');
             if (!ctx) return;
 
-            let imgData: ImageData | null = null;
-            if (canvas.width > 0 && canvas.height > 0) {
-                imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-            }
-
-            // Maintain 16:9 Aspect Ratio within container
-            const containerWidth = container.clientWidth;
-            const containerHeight = container.clientHeight;
-
-            // Calculate best fit
-            let newWidth = containerWidth;
-            let newHeight = containerWidth * (9 / 16);
-
-            if (newHeight > containerHeight) {
-                newHeight = containerHeight;
-                newWidth = containerHeight * (16 / 9);
-            }
-
             // Set internal resolution (fixed 1280x720 for consistent coordinates)
-            // Visual scale is handled by CSS, but we keep the canvas buffer fixed so
-            // coordinates match across all screen sizes.
             if (canvas.width !== 1280) {
                 canvas.width = 1280;
                 canvas.height = 720;
@@ -301,8 +290,16 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
         };
 
         window.addEventListener('resize', resizeCanvas);
+        const observer = new ResizeObserver(resizeCanvas);
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+        
         resizeCanvas();
-        return () => window.removeEventListener('resize', resizeCanvas);
+        return () => {
+            window.removeEventListener('resize', resizeCanvas);
+            observer.disconnect();
+        };
     }, []);
 
 
@@ -321,14 +318,29 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
             clientY = (e as React.MouseEvent).clientY;
         }
 
-        // Map screen coordinates to internal 1280x720 resolution
-        const scaleX = canvas.width / rect.width;
-        const scaleY = canvas.height / rect.height;
+        // Calculate actual rendered size and position of the canvas bitmap due to object-fit: contain
+        const renderRatio = rect.width / rect.height;
+        const canvasRatio = canvas.width / canvas.height;
+        
+        let renderedWidth = rect.width;
+        let renderedHeight = rect.height;
+        let offsetX = 0;
+        let offsetY = 0;
 
-        return {
-            x: (clientX - rect.left) * scaleX,
-            y: (clientY - rect.top) * scaleY
-        };
+        if (renderRatio > canvasRatio) {
+            // Container is wider than canvas -> letterboxed on sides
+            renderedWidth = rect.height * canvasRatio;
+            offsetX = (rect.width - renderedWidth) / 2;
+        } else {
+            // Container is taller than canvas -> letterboxed on top/bottom
+            renderedHeight = rect.width / canvasRatio;
+            offsetY = (rect.height - renderedHeight) / 2;
+        }
+
+        const x = (clientX - rect.left - offsetX) * (canvas.width / renderedWidth);
+        const y = (clientY - rect.top - offsetY) * (canvas.height / renderedHeight);
+
+        return { x, y };
     };
 
     const drawLocal = (x: number, y: number, lastX: number, lastY: number, size: number, color: string, isInitial: boolean) => {
@@ -461,10 +473,10 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
     };
 
     return (
-        <div className="flex flex-col h-full gap-2 md:gap-4">
+        <div className="flex flex-row h-full gap-2 md:gap-4 min-h-0 w-full">
             <div
                 ref={containerRef}
-                className="flex-1 w-full bg-pd-surface-alt rounded-2xl flex items-center justify-center overflow-hidden touch-none relative shadow-sm"
+                className="flex-1 h-full bg-pd-surface-alt rounded-2xl flex items-center justify-center overflow-hidden touch-none relative shadow-sm"
             >
                 <canvas
                     ref={canvasRef}
@@ -477,10 +489,9 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
                     onTouchEnd={stopDrawing}
                     onTouchCancel={stopDrawing}
                     className={cn(
-                        "bg-white touch-none",
+                        "bg-white touch-none shadow-sm w-full h-full object-contain",
                         isDrawer ? "cursor-crosshair" : "cursor-default pointer-events-none"
                     )}
-                    style={{ width: '100%', height: '100%' }}
                 />
 
                 {!isDrawer && (
@@ -489,98 +500,123 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
             </div>
 
             {isDrawer && (
-                <div className="flex flex-wrap gap-2 md:gap-4 items-center justify-between bg-pd-surface p-2 md:p-4 rounded-xl md:rounded-2xl shadow-sm">
-                    <div className="flex flex-wrap items-center gap-2">
-                        <div className="flex items-center gap-1 bg-pd-surface-alt p-1 rounded-xl">
-                            <Button
-                                variant={mode === 'draw' ? 'default' : 'ghost'}
-                                size="icon"
-                                onClick={() => setMode('draw')}
-                                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
-                                title="Pencil"
-                            >
-                                <Pencil className="w-4 h-4 md:w-5 md:h-5" />
-                            </Button>
-                            <Button
-                                variant={mode === 'fill' ? 'default' : 'ghost'}
-                                size="icon"
-                                onClick={() => setMode('fill')}
-                                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
-                                title="Paint Bucket"
-                            >
-                                <PaintBucket className="w-4 h-4 md:w-5 md:h-5" />
-                            </Button>
-                            <Button
-                                variant={mode === 'erase' ? 'secondary' : 'ghost'}
-                                size="icon"
-                                onClick={() => setMode('erase')}
-                                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
-                                title="Eraser"
-                            >
-                                <Eraser className="w-4 h-4 md:w-5 md:h-5" />
+                <div className="flex flex-col w-14 md:w-16 shrink-0 gap-2 items-center bg-pd-surface p-2 rounded-xl md:rounded-2xl shadow-sm overflow-y-auto">
+                    <Button
+                        variant={mode === 'draw' ? 'default' : 'ghost'}
+                        size="icon"
+                        onClick={() => setMode('draw')}
+                        className="w-10 h-10 rounded-lg shrink-0"
+                        title="Pencil"
+                    >
+                        <Pencil className="w-5 h-5" />
+                    </Button>
+                    <Button
+                        variant={mode === 'fill' ? 'default' : 'ghost'}
+                        size="icon"
+                        onClick={() => setMode('fill')}
+                        className="w-10 h-10 rounded-lg shrink-0"
+                        title="Paint Bucket"
+                    >
+                        <PaintBucket className="w-5 h-5" />
+                    </Button>
+                    <Button
+                        variant={mode === 'erase' ? 'secondary' : 'ghost'}
+                        size="icon"
+                        onClick={() => setMode('erase')}
+                        className="w-10 h-10 rounded-lg shrink-0"
+                        title="Eraser"
+                    >
+                        <Eraser className="w-5 h-5" />
+                    </Button>
+
+                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={undo}
+                        className="w-10 h-10 rounded-lg shrink-0"
+                        title="Undo"
+                    >
+                        <Undo2 className="w-5 h-5" />
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={redo}
+                        className="w-10 h-10 rounded-lg shrink-0"
+                        title="Redo"
+                    >
+                        <Redo2 className="w-5 h-5" />
+                    </Button>
+
+                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+
+                    {BASIC_COLORS.map((c) => (
+                        <button
+                            key={c}
+                            onClick={() => { setColor(c); if (mode === 'erase') setMode('draw'); }}
+                            className={cn(
+                                "w-8 h-8 rounded-full transition-transform hover:scale-110 shrink-0",
+                                color === c && mode !== 'erase' ? "scale-110 ring-2 ring-pd-sky ring-offset-2 ring-offset-pd-surface z-10" : "ring-1 ring-pd-surface-alt"
+                            )}
+                            style={{ backgroundColor: c }}
+                        />
+                    ))}
+
+                    <button 
+                        onClick={() => setShowColorModal(true)} 
+                        className="w-8 h-8 rounded-full shrink-0 flex items-center justify-center bg-gradient-to-br from-red-500 via-green-500 to-blue-500 text-white hover:scale-110 transition-transform"
+                        title="More Colors"
+                    >
+                        <Plus className="w-4 h-4" />
+                    </button>
+
+                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+
+                    {SIZES.map((s) => (
+                        <button
+                            key={s}
+                            onClick={() => setSize(s)}
+                            className={cn(
+                                "w-10 h-10 flex items-center justify-center rounded-lg hover:bg-pd-surface transition-colors shrink-0",
+                                size === s ? "bg-pd-sky text-white shadow-sm" : "text-pd-text"
+                            )}
+                        >
+                            <div className="bg-current rounded-full" style={{ width: Math.max(2, s / 4), height: Math.max(2, s / 4) }} />
+                        </button>
+                    ))}
+
+                    <div className="flex-1" />
+
+                    <Button variant="destructive" size="icon" onClick={clearCanvas} className="w-10 h-10 rounded-lg shrink-0" title="Clear">
+                        <Trash2 className="w-5 h-5" />
+                    </Button>
+                </div>
+            )}
+
+            {showColorModal && (
+                <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 p-4 animate-in fade-in duration-200">
+                    <div className="bg-pd-surface p-4 rounded-2xl shadow-xl max-w-sm w-full animate-in zoom-in-95 duration-200">
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="font-bold text-lg text-pd-text">More Colors</h3>
+                            <Button variant="ghost" size="icon" onClick={() => setShowColorModal(false)}>
+                                <X className="w-5 h-5" />
                             </Button>
                         </div>
-
-                        <div className="w-[1px] h-6 bg-pd-surface-alt/50 mx-1" />
-
-                        <div className="flex items-center gap-1 bg-pd-surface-alt p-1 rounded-xl">
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                                onClick={undo}
-                                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
-                                title="Undo"
-                            >
-                                <Undo2 className="w-4 h-4 md:w-5 md:h-5" />
-                            </Button>
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                                onClick={redo}
-                                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
-                                title="Redo"
-                            >
-                                <Redo2 className="w-4 h-4 md:w-5 md:h-5" />
-                            </Button>
-                        </div>
-
-                        <div className="w-[1px] h-6 bg-pd-surface-alt/50 mx-1" />
-
-                        <div className="flex flex-wrap items-center gap-1.5 p-1">
-                            {COLORS.map((c) => (
-                                <button
-                                    key={c}
-                                    onClick={() => { setColor(c); if (mode === 'erase') setMode('draw'); }}
+                        <div className="grid grid-cols-7 gap-2">
+                            {COLORS.map(c => (
+                                <button 
+                                    key={c} 
+                                    onClick={() => { setColor(c); if (mode === 'erase') setMode('draw'); setShowColorModal(false); }} 
                                     className={cn(
-                                        "w-5 h-5 md:w-7 md:h-7 rounded-full transition-transform hover:scale-110 shrink-0",
-                                        color === c && mode !== 'erase' ? "scale-110 ring-2 ring-pd-sky ring-offset-2 ring-offset-pd-surface z-10" : "ring-1 ring-pd-surface-alt"
+                                        "w-8 h-8 rounded-full ring-1 ring-pd-surface-alt hover:scale-110 transition-transform",
+                                        color === c && mode !== 'erase' ? "ring-2 ring-pd-sky ring-offset-2" : ""
                                     )}
-                                    style={{ backgroundColor: c }}
+                                    style={{ backgroundColor: c }} 
                                 />
                             ))}
                         </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 md:gap-4 ml-auto">
-                        <div className="flex items-center gap-1 bg-pd-surface-alt p-1 rounded-xl overflow-x-auto">
-                            {SIZES.map((s) => (
-                                <button
-                                    key={s}
-                                    onClick={() => setSize(s)}
-                                    className={cn(
-                                        "w-7 h-7 md:w-9 md:h-9 flex items-center justify-center rounded-lg hover:bg-pd-surface transition-colors shrink-0",
-                                        size === s ? "bg-pd-sky text-white shadow-sm" : "text-pd-text"
-                                    )}
-                                >
-                                    <div className="bg-current rounded-full" style={{ width: Math.max(2, s / 4), height: Math.max(2, s / 4) }} />
-                                </button>
-                            ))}
-                        </div>
-
-                        <Button variant="destructive" onClick={clearCanvas} className="gap-2 h-9 md:h-11 px-3 md:px-5 rounded-xl">
-                            <Trash2 className="w-4 h-4 md:w-5 md:h-5" />
-                            <span className="hidden md:inline">Clear</span>
-                        </Button>
                     </div>
                 </div>
             )}

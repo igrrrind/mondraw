@@ -14,9 +14,11 @@ interface ChatboxProps {
     messages: ChatMessage[];
     onSendMessage: (msg: string) => void;
     isDrawer: boolean;
+    title?: string;
+    showInput?: boolean;
 }
 
-export function Chatbox({ messages, onSendMessage, isDrawer }: ChatboxProps) {
+export function Chatbox({ messages, onSendMessage, isDrawer, title, showInput = true }: ChatboxProps) {
     const [input, setInput] = useState('');
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -28,6 +30,7 @@ export function Chatbox({ messages, onSendMessage, isDrawer }: ChatboxProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!showInput) return;
         if (input.trim() && !isDrawer) {
             onSendMessage(input.trim());
             setInput('');
@@ -39,7 +42,7 @@ export function Chatbox({ messages, onSendMessage, isDrawer }: ChatboxProps) {
             <div className="bg-pd-surface-alt p-2 md:p-3">
                 <h3 className="text-pd-text font-black text-[10px] md:text-sm tracking-widest uppercase flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-pd-sky animate-pulse" />
-                    Guesses & Chat
+                    {title || 'Guesses & Chat'}
                 </h3>
             </div>
 
@@ -60,25 +63,27 @@ export function Chatbox({ messages, onSendMessage, isDrawer }: ChatboxProps) {
                 ))}
             </div>
 
-            <form onSubmit={handleSubmit} className="p-2 md:p-3 bg-pd-surface-alt/50 border-t border-pd-surface-alt flex gap-2">
-                <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder={isDrawer ? "Drawing..." : "Type guess..."}
-                    disabled={isDrawer}
-                    className="flex-1 bg-pd-surface rounded-xl px-3 py-1.5 md:py-2 text-xs md:text-sm text-pd-text placeholder:text-pd-text-muted/50 focus:outline-none focus:ring-2 focus:ring-pd-sky/30 disabled:opacity-50 min-w-0"
-                    maxLength={50}
-                />
-                <Button
-                    type="submit"
-                    size="icon"
-                    disabled={!input.trim() || isDrawer}
-                    className="rounded-xl h-8 w-8 md:h-10 md:w-10 shrink-0"
-                >
-                    <SendHorizontal className="w-4 h-4 md:w-5 md:h-5" />
-                </Button>
-            </form>
+            {showInput && (
+                <form onSubmit={handleSubmit} className="p-2 md:p-3 bg-pd-surface-alt/50 border-t border-pd-surface-alt flex gap-2">
+                    <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder={isDrawer ? "Drawing..." : "Type guess..."}
+                        disabled={isDrawer}
+                        className="flex-1 bg-pd-surface rounded-xl px-3 py-1.5 md:py-2 text-xs md:text-sm text-pd-text placeholder:text-pd-text-muted/50 focus:outline-none focus:ring-2 focus:ring-pd-sky/30 disabled:opacity-50 min-w-0"
+                        maxLength={50}
+                    />
+                    <Button
+                        type="submit"
+                        size="icon"
+                        disabled={!input.trim() || isDrawer}
+                        className="rounded-xl h-8 w-8 md:h-10 md:w-10 shrink-0"
+                    >
+                        <SendHorizontal className="w-4 h-4 md:w-5 md:h-5" />
+                    </Button>
+                </form>
+            )}
         </div>
     );
 }
