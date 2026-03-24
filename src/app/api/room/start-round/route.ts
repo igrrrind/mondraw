@@ -15,16 +15,29 @@ export async function POST(req: Request) {
 
         const roomState: RoomState = typeof roomStateString === 'string' ? JSON.parse(roomStateString) : roomStateString;
 
-        // Use playerOrder for sequential selection
+        // Sync playerOrder with current players to handle leaves/joins
+        const activePlayerIds = Object.keys(roomState.players);
+        
         if (!roomState.playerOrder || roomState.playerOrder.length === 0) {
-            roomState.playerOrder = Object.keys(roomState.players);
+            roomState.playerOrder = activePlayerIds;
+        } else {
+            // Filter out players who are no longer in the room
+            roomState.playerOrder = roomState.playerOrder.filter(id => activePlayerIds.includes(id));
+            // Add new players who aren't in the order yet to the end of the queue
+            activePlayerIds.forEach(id => {
+                if (!roomState.playerOrder.includes(id)) {
+                    roomState.playerOrder.push(id);
+                }
+            });
         }
 
         const playerOrder = roomState.playerOrder;
         const currentDrawerId = playerOrder.find(id => roomState.players[id]?.isDrawer);
         const currentDrawerIndex = currentDrawerId ? playerOrder.indexOf(currentDrawerId) : -1;
-        const nextDrawerIndex = (currentDrawerIndex + 1) % playerOrder.length;
-        const nextDrawerId = playerOrder[nextDrawerIndex];
+        
+        // Find next valid drawer. If someone left, currentDrawerIndex might be -1 or invalid.
+        let nextDrawerIndex = (currentDrawerIndex + 1) % playerOrder.length;
+        let nextDrawerId = playerOrder[nextDrawerIndex];
 
         // Reset all, set new drawer
         // If the game was OVER, reset the round count and scores
@@ -35,6 +48,9 @@ export async function POST(req: Request) {
                     roomState.players[id].score = 0;
                 }
             });
+            // Also reset to first player in queue for new game
+            nextDrawerIndex = 0;
+            nextDrawerId = playerOrder[0];
         }
 
         Object.keys(roomState.players).forEach((id) => {
