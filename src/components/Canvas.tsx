@@ -194,10 +194,25 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
 
         channel.bind("pusher:subscription_succeeded", () => {
             console.log("[Canvas] Subscription succeeded for channel:", channel.name);
+            // If not drawer, ask for current canvas state
+            if (!isDrawer) {
+                setTimeout(() => {
+                    console.log("[Canvas] Requesting initial sync...");
+                    channel.trigger('client-request-full-sync', {});
+                }, 1000); // Wait for drawer to be ready
+            }
         });
 
         channel.bind("pusher:subscription_error", (err: any) => {
             console.error("[Canvas] Subscription error:", err);
+        });
+
+        // Handle full sync requested by new player
+        channel.bind("client-request-full-sync", () => {
+            if (isDrawer) {
+                console.log("[Canvas] Sync requested by new player, broadcasting...");
+                broadcastFullCanvas();
+            }
         });
 
         const handleDrawEvent = (batches: any[]) => {
@@ -383,6 +398,12 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
 
     const startDrawing = (e: React.MouseEvent | React.TouchEvent) => {
         if (!isDrawer) return;
+
+        // Record interaction for parent inactivity timer
+        if (typeof window !== 'undefined' && (window as any).handleInteraction) {
+            (window as any).handleInteraction();
+        }
+
         e.preventDefault();
         const coords = getCoordinates(e);
         if (!coords) return;
@@ -473,7 +494,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
     };
 
     return (
-        <div className="flex flex-row h-full gap-2 md:gap-4 min-h-0 w-full">
+        <div className="flex flex-row max-md:flex-col h-full gap-2 md:gap-4 min-h-0 w-full">
             <div
                 ref={containerRef}
                 className="flex-1 h-full bg-pd-surface-alt rounded-2xl flex items-center justify-center overflow-hidden touch-none relative shadow-sm"
@@ -489,7 +510,9 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
                     onTouchEnd={stopDrawing}
                     onTouchCancel={stopDrawing}
                     className={cn(
-                        "bg-white touch-none shadow-sm w-full h-full object-contain",
+                        "bg-white touch-none shadow-sm w-full h-full",
+                        isDrawer && "max-md:object-cover",
+                        !isDrawer || (typeof window !== 'undefined' && window.innerWidth >= 768) ? "object-contain" : "",
                         isDrawer ? "cursor-crosshair" : "cursor-default pointer-events-none"
                     )}
                 />
@@ -500,7 +523,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
             </div>
 
             {isDrawer && (
-                <div className="flex flex-col w-14 md:w-16 shrink-0 gap-2 items-center bg-pd-surface p-2 rounded-xl md:rounded-2xl shadow-sm overflow-y-auto">
+                <div className="flex flex-col max-md:flex-row w-14 md:w-16 max-md:w-full max-md:h-14 shrink-0 gap-2 items-center bg-pd-surface p-2 rounded-xl md:rounded-2xl shadow-sm overflow-y-auto overflow-x-auto scrollbar-hide">
                     <Button
                         variant={mode === 'draw' ? 'default' : 'ghost'}
                         size="icon"
@@ -529,7 +552,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
                         <Eraser className="w-5 h-5" />
                     </Button>
 
-                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+                    <div className="w-8 md:w-8 h-[1px] md:h-[1px] max-md:w-[1px] max-md:h-8 bg-pd-surface-alt/50 my-1 max-md:my-0 max-md:mx-1 shrink-0" />
 
                     <Button
                         variant="ghost"
@@ -550,7 +573,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
                         <Redo2 className="w-5 h-5" />
                     </Button>
 
-                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+                    <div className="w-8 md:w-8 h-[1px] md:h-[1px] max-md:w-[1px] max-md:h-8 bg-pd-surface-alt/50 my-1 max-md:my-0 max-md:mx-1 shrink-0" />
 
                     {BASIC_COLORS.map((c) => (
                         <button
@@ -572,7 +595,7 @@ export function Canvas({ roomId, isDrawer, pusher }: CanvasProps) {
                         <Plus className="w-4 h-4" />
                     </button>
 
-                    <div className="w-8 h-[1px] bg-pd-surface-alt/50 my-1 shrink-0" />
+                    <div className="w-8 md:w-8 h-[1px] md:h-[1px] max-md:w-[1px] max-md:h-8 bg-pd-surface-alt/50 my-1 max-md:my-0 max-md:mx-1 shrink-0" />
 
                     {SIZES.map((s) => (
                         <button

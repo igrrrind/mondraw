@@ -13,16 +13,20 @@ export async function POST(req: Request) {
 
         const roomState: RoomState = typeof roomStateString === 'string' ? JSON.parse(roomStateString) : roomStateString;
 
-        // Add player to room state
-        const newPlayer: Player = {
-            id: playerId,
-            name: playerName,
-            score: 0,
-            isDrawer: false,
-            hasGuessed: false
-        };
+        // Add player to room state or retain existing
+        if (!roomState.players[playerId]) {
+            roomState.players[playerId] = {
+                id: playerId,
+                name: playerName,
+                score: 0,
+                isDrawer: false,
+                hasGuessed: false
+            };
+        } else {
+            // Update name in case they changed it, but keep score and status
+            roomState.players[playerId].name = playerName;
+        }
 
-        roomState.players[playerId] = newPlayer;
         if (!roomState.playerOrder) roomState.playerOrder = []; // Migration safety
         if (!roomState.playerOrder.includes(playerId)) {
             roomState.playerOrder.push(playerId);

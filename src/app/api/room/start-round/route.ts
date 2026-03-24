@@ -27,6 +27,16 @@ export async function POST(req: Request) {
         const nextDrawerId = playerOrder[nextDrawerIndex];
 
         // Reset all, set new drawer
+        // If the game was OVER, reset the round count and scores
+        if (roomState.status === 'GAME_OVER') {
+            roomState.currentRound = 0;
+            Object.keys(roomState.players).forEach(id => {
+                if (roomState.players[id]) {
+                    roomState.players[id].score = 0;
+                }
+            });
+        }
+
         Object.keys(roomState.players).forEach((id) => {
             const player = roomState.players[id];
             if (player) {
@@ -41,6 +51,7 @@ export async function POST(req: Request) {
         roomState.wordOptions = options;
         roomState.currentRound += 1;
         roomState.roundTimer = 15; // 15 seconds to pick
+        roomState.roundStartTime = Date.now();
 
         // Reset currentWord until selected
         roomState.currentWord = undefined;

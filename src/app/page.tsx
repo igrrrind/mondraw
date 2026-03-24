@@ -13,6 +13,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { cn } from "@/utils/cn";
 
 const BACKGROUND_IMAGES = [
   "bg1.jpeg", "bg2.jpeg", "bg3.jpeg", "bg4.jpeg", "bg5.jpeg",
@@ -37,6 +39,7 @@ export default function Home() {
   const [isCreating, setIsCreating] = useState(false);
   const [isMatching, setIsMatching] = useState(false);
   const [joinCode, setJoinCode] = useState("");
+  const [activeAccordion, setActiveAccordion] = useState<"join" | "create" | null>(null);
   const [bgImage, setBgImage] = useState<string | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -44,7 +47,11 @@ export default function Home() {
     const randomBg = BACKGROUND_IMAGES[Math.floor(Math.random() * BACKGROUND_IMAGES.length)];
     setBgImage(randomBg);
 
-    const checkSize = () => setIsDesktop(window.innerWidth >= 768);
+    const checkSize = () => {
+      const desktop = window.innerWidth >= 768;
+      setIsDesktop(desktop);
+      if (desktop) setActiveAccordion(null);
+    };
     checkSize();
     window.addEventListener('resize', checkSize);
     return () => window.removeEventListener('resize', checkSize);
@@ -204,19 +211,15 @@ export default function Home() {
                 Trainer Name
               </label> */}
               {/* Show Reference Toggle */}
-              <div className="flex items-center justify-between p-3 bg-pd-surface-alt rounded-xl flex-1">
-                <div className="flex flex-col">
-                  <span className="text-sm font-bold text-pd-text">Show Reference</span>
-                  <span className="text-[10px] text-pd-text-muted">Display Pokémon images while drawing</span>
+              <div className="flex items-center justify-between p-3 bg-pd-surface-alt rounded-xl flex-1 gap-3">
+                <div className="flex flex-col min-w-0">
+                  <span className="text-[13px] md:text-sm font-bold text-pd-text truncate">Show Reference</span>
+                  <span className="text-[9px] md:text-[10px] text-pd-text-muted leading-tight">Display Pokémon images while drawing</span>
                 </div>
-                <button
-                  onClick={() => setShowReference(!showReference)}
-                  className={`w-12 h-6 rounded-full transition-colors relative flex items-center p-[2px] border-2 cursor-pointer ${showReference ? 'bg-pd-green border-transparent' : 'bg-pd-surface-alt/80 border-pd-surface'
-                    }`}
-                >
-                  <div className={`w-4 h-4 bg-white rounded-full transition-transform duration-200 ${showReference ? 'translate-x-6' : 'translate-x-0'
-                    }`} />
-                </button>
+                <Switch 
+                  checked={showReference} 
+                  onCheckedChange={setShowReference}
+                />
               </div>
               <div className="flex items-center gap-4">
 
@@ -247,7 +250,7 @@ export default function Home() {
                       onChange={(e) => setJoinCode(e.target.value)}
                       className="flex-1 bg-pd-surface-alt rounded-lg p-3 text-pd-text font-mono text-base focus:outline-none focus:ring-2 focus:ring-pd-sky/30 placeholder:text-pd-text-muted/40"
                     />
-                    <Button variant="secondary" onClick={handleJoinRoom} className="px-4 py-3 h-full text-base">
+                    <Button variant="secondary" onClick={handleJoinRoom} className="px-4 py-3 h-full text-base font-bold">
                       Join <ChevronRight className="w-3 h-3 ml-1" />
                     </Button>
                   </div>
@@ -260,18 +263,38 @@ export default function Home() {
 
           </div>
 
-          {/* Pokéball Separator */}
-          <div className="flex items-center justify-center py-2 md:py-0 px-5 space-x-6">
-            {/* Mobile-only Join Room */}
+          {/* Pokéball Separator / Accordion Controls */}
+          <div className="flex flex-col md:flex-row items-center justify-center py-2 md:py-0 px-5 gap-4">
             {!isDesktop && (
-              <div className="flex flex-1 flex-col w-full mb-6">
-                <div className="flex items-center gap-3  border-t border-pd-text/5 pt-4">
+              <div className="flex w-full gap-2">
+                <Button 
+                  variant={activeAccordion === 'join' ? 'default' : 'secondary'} 
+                  onClick={() => setActiveAccordion(activeAccordion === 'join' ? null : 'join')}
+                  className="flex-1 font-bold h-12 rounded-xl"
+                >
+                  <Gamepad2 className="w-4 h-4 mr-2" />
+                  Join
+                </Button>
+                <Button 
+                  variant={activeAccordion === 'create' ? 'default' : 'secondary'} 
+                  onClick={() => setActiveAccordion(activeAccordion === 'create' ? null : 'create')}
+                  className="flex-1 font-bold h-12 rounded-xl"
+                >
+                  <PlusCircle className="w-4 h-4 mr-2" />
+                  Create
+                </Button>
+              </div>
+            )}
+
+            {!isDesktop && activeAccordion === 'join' && (
+              <div className="flex flex-col w-full animate-in slide-in-from-top-2 duration-200">
+                <div className="flex items-center gap-3 border-t border-pd-text/5 pt-4">
                   <div className="w-8 h-8 bg-pd-sky/15 rounded-lg flex items-center justify-center">
                     <Gamepad2 className="w-4 h-4 text-pd-sky" />
                   </div>
                   <h3 className="font-bold text-pd-text">Join Room</h3>
                 </div>
-                <div className="gap-4 mt-3 flex">
+                <div className="gap-2 mt-3 flex">
                   <input
                     type="text"
                     placeholder="Code"
@@ -279,26 +302,31 @@ export default function Home() {
                     onChange={(e) => setJoinCode(e.target.value)}
                     className="flex-1 bg-pd-surface-alt rounded-lg p-3 text-pd-text font-mono text-base focus:outline-none focus:ring-2 focus:ring-pd-sky/30 placeholder:text-pd-text-muted/40"
                   />
-                  <Button variant="secondary" onClick={handleJoinRoom} className="px-4 py-3 h-full text-base">
+                  <Button variant="secondary" onClick={handleJoinRoom} className="px-4 py-3 h-full text-base font-bold">
                     Join <ChevronRight className="w-3 h-3 ml-1" />
                   </Button>
                 </div>
               </div>
             )}
-            <div className="relative w-12 h-12 flex items-center justify-center md:mt-0 mt-8">
-              {/* The Pokéball shape */}
-              <div className="absolute w-full h-full rounded-full border-[3px] border-pd-text bg-white overflow-hidden shadow-sm rotate-[-10deg]">
-                <div className="absolute top-0 left-0 w-full h-1/2 bg-pd-red border-b-[3px] border-pd-text" />
+
+            {isDesktop && (
+              <div className="relative w-12 h-12 flex items-center justify-center md:mt-0 mt-4 shrink-0">
+                <div className="absolute w-full h-full rounded-full border-[3px] border-pd-text bg-white overflow-hidden shadow-sm rotate-[-10deg]">
+                  <div className="absolute top-0 left-0 w-full h-1/2 bg-pd-red border-b-[3px] border-pd-text" />
+                </div>
+                <div className="z-10 w-6 h-6 rounded-full border-[3px] border-pd-text bg-white flex items-center justify-center shadow-inner">
+                  <span className="text-[8px] font-black text-pd-text-muted uppercase tracking-tighter">OR</span>
+                </div>
               </div>
-              {/* Center button with "OR" */}
-              <div className="z-10 w-6 h-6 rounded-full border-[3px] border-pd-text bg-white flex items-center justify-center shadow-inner">
-                <span className="text-[8px] font-black text-pd-text-muted uppercase tracking-tighter">OR</span>
-              </div>
-            </div>
+            )}
           </div>
 
-          {/* Create Room Card */}
-          <div className="bg-pd-surface rounded-2xl overflow-hidden">
+          {/* Create Room Card / Accordion Content */}
+          <div className={cn(
+            "bg-pd-surface md:rounded-2xl overflow-hidden transition-all duration-300",
+            !isDesktop && activeAccordion !== 'create' && "hidden",
+            !isDesktop && activeAccordion === 'create' && "block w-full rounded-2xl animate-in slide-in-from-top-2"
+          )}>
             <div className="p-5 space-y-5">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 bg-pd-green/15 rounded-xl flex items-center justify-center">

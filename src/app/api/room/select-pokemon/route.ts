@@ -33,6 +33,7 @@ export async function POST(req: Request) {
         roomState.currentWord = selectedPokemon.name;
         roomState.currentPokemonId = selectedPokemon.pokedex_id;
         roomState.roundTimer = 60;
+        roomState.roundStartTime = Date.now();
         roomState.wordOptions = undefined; // Clear options
 
         // Save state back to Redis

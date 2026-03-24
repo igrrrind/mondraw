@@ -12,15 +12,16 @@ export async function POST(req: Request) {
         const playerParams = req.url.split('?')[1];
         const urlParams = new URLSearchParams(playerParams);
         const playerName = urlParams.get('playerName') || `Trainer_${Math.floor(Math.random() * 1000)}`;
+        const userId = urlParams.get('userId') || socketId; // Use stable userId if provided
 
         const presenceData = {
-            user_id: socketId,
+            user_id: userId,
             user_info: {
                 name: playerName,
             },
         };
 
-        console.log("Pusher Auth Request:", { socketId, channelName, playerName });
+        console.log("Pusher Auth Request:", { socketId, channelName, playerName, userId });
         const authResponse = pusherServer.authorizeChannel(socketId, channelName, presenceData);
         return NextResponse.json(authResponse);
     } catch (error) {

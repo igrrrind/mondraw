@@ -31,10 +31,11 @@ export async function POST(req: Request) {
                 return NextResponse.json({ message: 'Already guessed' });
             }
 
-            // Calculate score based on time remaining
-            // Max score 500, decreases as time runs out
-            const scoreGained = Math.max(100, Math.floor((timeRemaining / (totalRoundTime || 60)) * 500));
-            const drawerScoreGained = Math.floor(scoreGained * 0.2); // Drawer gets 20% bonus
+            // Calculate score based on time remaining and correct guess count
+            // Max score 500, decreases as more players guess, drawer gets points
+            const correctGuessesCount = Object.values(roomState.players).filter(p => p.hasGuessed).length;
+            const scoreGained = Math.max(100, Math.floor(((timeRemaining / (totalRoundTime || 60)) * 500) - (correctGuessesCount * 10)));
+            const drawerScoreGained = 250; // Drawer gets 5 points per correct guess as per description
 
             // Update Guesser state
             roomState.players[playerId].score += scoreGained;
@@ -80,8 +81,8 @@ export async function POST(req: Request) {
             return NextResponse.json({ success: true, scoreGained });
         }
 
-        // If incorrect, just broadcast as a regular chat message
-        await pusherServer.trigger(`presence-room-${roomId}`, "chat-message", {
+        // If incorrect, broadcast as a guess attempt
+        await pusherServer.trigger(`presence-room-${roomId}`, "guess-attempt", {
             playerId,
             playerName: roomState.players[playerId].name,
             message: guess

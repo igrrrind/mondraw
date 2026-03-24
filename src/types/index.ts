@@ -36,6 +36,7 @@ export interface RoomState {
   roundTimer?: number;
   roundLimit: number;
   currentRound: number;
+  roundStartTime?: number; // timestamp when phase started
 }
 
 export interface DrawPoint {

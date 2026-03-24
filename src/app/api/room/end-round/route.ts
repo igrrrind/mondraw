@@ -29,6 +29,7 @@ export async function POST(req: Request) {
             roomState.status = 'ROUND_END' as RoomStatus;
         }
 
+        roomState.roundStartTime = Date.now();
         roomState.currentWord = undefined;
         roomState.wordOptions = undefined;
 

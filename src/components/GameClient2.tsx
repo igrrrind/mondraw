@@ -22,16 +22,82 @@ interface GameClient2Props {
 export function GameClient2({ roomId, initialState, playerName }: GameClient2Props) {
     const [gameState, setGameState] = useState<RoomState>(initialState);
     const [messages, setMessages] = useState<any[]>([]);
+    const [guesses, setGuesses] = useState<any[]>([]);
     const [playerId, setPlayerId] = useState<string>('');
     const [targetPokemon, setTargetPokemon] = useState<Pokemon | undefined>(undefined);
-    const [timeRemaining, setTimeRemaining] = useState(60);
+    const [timeRemaining, setTimeRemaining] = useState(() => {
+        if (initialState.status === 'LOBBY' || !initialState.roundStartTime) return 60;
+        
+        const totalTime = initialState.status === 'SELECTING' ? 15 : 
+                         initialState.status === 'ROUND_END' ? 10 : 60;
+        
+        const elapsed = Math.floor((Date.now() - initialState.roundStartTime) / 1000);
+        return Math.max(0, totalTime - elapsed);
+    });
     const [pusher, setPusher] = useState<PusherClient | null>(null);
     const [revealedWord, setRevealedWord] = useState<string>('');
     const [revealedId, setRevealedId] = useState<number>(25);
-    const [mobilePanel, setMobilePanel] = useState<'guesses' | 'chat'>('guesses');
+    const [mobilePanel, setMobilePanel] = useState<'guesses' | 'chat' | 'leaderboard'>('guesses');
+    const [lastInteraction, setLastInteraction] = useState<number>(Date.now());
+
+    // Expose interaction handler for children components
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            (window as any).handleInteraction = () => setLastInteraction(Date.now());
+        }
+        return () => {
+            if (typeof window !== 'undefined') {
+                delete (window as any).handleInteraction;
+            }
+        };
+    }, []);
 
     const currentPlayer = gameState.players[playerId];
     const isDrawer = currentPlayer?.isDrawer || false;
+
+    // Handle inactivity
+    useEffect(() => {
+        const checkInactivity = setInterval(() => {
+            const now = Date.now();
+            if (now - lastInteraction > 60000) { // 60 seconds
+                handleLeaveRoom();
+            }
+        }, 5000); // Check every 5s
+
+        return () => clearInterval(checkInactivity);
+    }, [lastInteraction]);
+
+    const handleInteraction = () => {
+        setLastInteraction(Date.now());
+    };
+
+    const handleLeaveRoom = async () => {
+        try {
+            await fetch('/api/room/leave', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ roomId, playerId })
+            });
+            window.location.href = '/?error=inactivity';
+        } catch (err) {
+            console.error("Failed to leave room", err);
+            window.location.href = '/';
+        }
+    };
+
+    // Load initial target pokemon if drawing
+    useEffect(() => {
+        if (initialState.status === 'DRAWING' && initialState.currentWord && !targetPokemon) {
+            // Reconstruct minimal pokemon object for UI from ID/Name
+            setTargetPokemon({
+                id: initialState.currentPokemonId || 0,
+                pokedex_id: initialState.currentPokemonId || 0,
+                name: initialState.currentWord,
+                generation: 1, // Placeholder
+                rarity: 1
+            });
+        }
+    }, [initialState]);
 
     // Pusher setup
     useEffect(() => {
@@ -43,9 +109,15 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
 
         if (!finalName) return;
 
+        let stableUserId = sessionStorage.getItem('pokedraw_user_id');
+        if (!stableUserId) {
+            stableUserId = Math.random().toString(36).substring(2, 10);
+            sessionStorage.setItem('pokedraw_user_id', stableUserId);
+        }
+
         const pusher = new PusherClient(process.env.NEXT_PUBLIC_PUSHER_KEY!, {
             cluster: process.env.NEXT_PUBLIC_PUSHER_CLUSTER!,
-            authEndpoint: `/api/pusher/auth?playerName=${encodeURIComponent(finalName)}`,
+            authEndpoint: `/api/pusher/auth?playerName=${encodeURIComponent(finalName)}&userId=${stableUserId}`,
         });
 
         setPusher(pusher);
@@ -107,8 +179,14 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
             setMessages(prev => [...prev, { id: Date.now().toString() + Math.random(), ...data }]);
         });
 
+        channel.bind("guess-attempt", (data: any) => {
+            setGuesses(prev => [...prev, { id: Date.now().toString() + Math.random(), ...data }]);
+        });
+
         channel.bind("word-guessed", (data: any) => {
-            setMessages(prev => [...prev, { id: Date.now().toString() + Math.random(), isSystem: true, ...data }]);
+            const sysMsg = { id: Date.now().toString() + Math.random(), isSystem: true, ...data };
+            setGuesses(prev => [...prev, sysMsg]);
+            setMessages(prev => [...prev, sysMsg]);
 
             if (data.players) {
                 setGameState(prev => ({ ...prev, players: data.players }));
@@ -130,6 +208,51 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
             pusher.disconnect();
         };
     }, [roomId, playerName]);
+
+    // Handle visibility change to resync game state
+    useEffect(() => {
+        const handleVisibilityChange = async () => {
+            if (document.visibilityState === 'visible') {
+                try {
+                    const response = await fetch('/api/room/sync', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ roomId })
+                    });
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        setGameState(prev => ({
+                            ...prev,
+                            status: data.status,
+                            players: data.players,
+                            currentRound: data.currentRound,
+                            currentWord: data.currentWord,
+                            currentPokemonId: data.currentPokemonId,
+                            wordOptions: data.wordOptions
+                        }));
+                        setTimeRemaining(data.timeRemaining);
+
+                        // If we are drawing and word just synced, update target pokemon
+                        if (data.status === 'DRAWING' && data.currentWord) {
+                            setTargetPokemon({
+                                id: data.currentPokemonId || 0,
+                                pokedex_id: data.currentPokemonId || 0,
+                                name: data.currentWord,
+                                generation: 1,
+                                rarity: 1
+                            });
+                        }
+                    }
+                } catch (err) {
+                    console.error("Failed to sync room state", err);
+                }
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+    }, [roomId]);
 
     // Timer logic
     useEffect(() => {
@@ -176,10 +299,22 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
     }, [gameState.status, isDrawer, roomId, gameState.currentRound]);
 
     useEffect(() => {
-        if (gameState.status === 'GAME_OVER' && timeRemaining <= 0) {
-            window.location.href = '/';
+        if (gameState.status === 'GAME_OVER') {
+            const timer = setInterval(() => {
+                setTimeRemaining((prev) => {
+                    if (prev <= 1 && isDrawer) {
+                        fetch('/api/room/start-round', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ roomId })
+                        });
+                    }
+                    return Math.max(0, prev - 1);
+                });
+            }, 1000);
+            return () => clearInterval(timer);
         }
-    }, [gameState.status, timeRemaining]);
+    }, [gameState.status, isDrawer, roomId]);
 
     const handleStartGame = async () => {
         try {
@@ -214,9 +349,11 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
         });
     };
 
-    const handleSendMessage = async (msg: string) => {
-        setMessages(prev => [...prev, { id: Date.now().toString(), playerName, message: msg }]);
-
+    const handleSendGuess = async (msg: string) => {
+        handleInteraction();
+        // Prevent guessing if already guessed correctly this round
+        if (currentPlayer?.hasGuessed) return;
+        
         try {
             await fetch('/api/game/guess', {
                 method: 'POST',
@@ -230,7 +367,25 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
                 })
             });
         } catch (err) {
-            console.error("Failed to send message", err);
+            console.error("Failed to send guess", err);
+        }
+    };
+
+    const handleSendChat = async (msg: string) => {
+        handleInteraction();
+        try {
+            await fetch('/api/game/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    roomId,
+                    playerId,
+                    playerName,
+                    message: msg
+                })
+            });
+        } catch (err) {
+            console.error("Failed to send chat", err);
         }
     };
 
@@ -244,18 +399,25 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
     }
 
     return (
-        <div className="flex flex-col h-screen min-h-[575px] bg-pd-bg p-2 md:p-4 font-sans overflow-y-auto overflow-x-hidden">
-            <GameHeader 
-                roomId={roomId} 
-                gameState={gameState} 
-                timeRemaining={timeRemaining} 
-                onStartGame={handleStartGame} 
-            />
+        <div className={cn(
+            "flex flex-col h-screen min-h-[575px] bg-pd-bg p-2 md:p-4 font-sans overflow-y-auto overflow-x-hidden transition-colors duration-300",
+            isDrawer && "max-md:p-0"
+        )}>
+                <GameHeader 
+                    roomId={roomId} 
+                    gameState={gameState} 
+                    timeRemaining={timeRemaining} 
+                    onStartGame={handleStartGame} 
+                />
+     
 
-            <div className="flex flex-col lg:flex-row gap-2 md:gap-4 flex-1 min-h-0">
+            <div className={cn(
+                "flex flex-col lg:flex-row gap-2 md:gap-4 flex-1 min-h-0",
+                isDrawer && "max-md:gap-0"
+            )}>
                 <div className="flex-1 flex flex-col min-w-0 min-h-0 items-center w-full">
                     <div className={cn(
-                        "flex-1 min-h-0 flex flex-col items-center justify-center w-full transition-all duration-300",
+                        "flex-1 shrink min-h-0 flex flex-col items-center justify-center w-full transition-all duration-300 relative",
                         isDrawer ? "h-full" : ""
                     )}>
                         <GameArea 
@@ -269,30 +431,32 @@ export function GameClient2({ roomId, initialState, playerName }: GameClient2Pro
                             pusher={pusher}
                             onSelectPokemon={handleSelectPokemon}
                         />
+
+                        {/* Timer Bar - Positioned absolutely under GameArea */}
+                        {!isDrawer && gameState.status !== 'LOBBY' && gameState.status !== 'GAME_OVER' && (
+                            <div className="absolute bottom-[-8px] left-0 w-full h-1.5 bg-pd-surface-alt rounded-full overflow-hidden shrink-0 animate-phase-in z-10">
+                                <div
+                                    className={cn(
+                                        "h-full transition-all duration-1000 ease-linear rounded-full",
+                                        timeRemaining < 10 ? "bg-pd-red" : "bg-pd-sky"
+                                    )}
+                                    style={{
+                                        width: `${(timeRemaining / (
+                                            gameState.status === 'SELECTING' ? 15 :
+                                                gameState.status === 'ROUND_END' ? 10 : 60
+                                        )) * 100}%`
+                                    }}
+                                />
+                            </div>
+                        )}
                     </div>
 
-                    {/* Timer Bar */}
-                    {gameState.status !== 'LOBBY' && gameState.status !== 'GAME_OVER' && (
-                        <div className="w-full h-2 bg-pd-surface-alt rounded-full mt-2 md:mt-3 overflow-hidden shrink-0 animate-phase-in mx-auto" style={{ maxWidth: '100%', aspectRatio: '16/9', maxHeight: '8px' }}>
-                            <div
-                                className={cn(
-                                    "h-full transition-all duration-1000 ease-linear rounded-full",
-                                    timeRemaining < 10 ? "bg-pd-red" : "bg-pd-sky"
-                                )}
-                                style={{
-                                    width: `${(timeRemaining / (
-                                        gameState.status === 'SELECTING' ? 15 :
-                                            gameState.status === 'ROUND_END' ? 10 : 60
-                                    )) * 100}%`
-                                }}
-                            />
-                        </div>
-                    )}
-
-                    <div className={cn("w-full transition-all duration-300", isDrawer ? "hidden lg:block" : "block")}>
+                    <div className={cn("w-full transition-all duration-300 shrink-0", isDrawer ? "hidden lg:block" : "block")}>
                         <GameBottomPanels 
                             messages={messages}
-                            onSendMessage={handleSendMessage}
+                            guesses={guesses}
+                            onSendChat={handleSendChat}
+                            onSendGuess={handleSendGuess}
                             isDrawer={isDrawer}
                             mobilePanel={mobilePanel}
                             setMobilePanel={setMobilePanel}

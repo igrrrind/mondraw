@@ -4,6 +4,7 @@ import { Canvas } from '../Canvas';
 import { ReferenceTool } from '../ReferenceTool';
 import { RoomState, Pokemon } from '@/types';
 import PusherClient from 'pusher-js';
+import { cn } from '@/utils/cn';
 
 interface GameAreaProps {
     gameState: RoomState;
@@ -31,12 +32,23 @@ export function GameArea({
     return (
         <div className="w-full h-full flex items-center justify-center overflow-hidden" style={{ containerType: 'size' }}>
             <div 
-                className="relative bg-pd-surface rounded-2xl shadow-sm overflow-hidden flex flex-col"
+                className={cn(
+                    "relative bg-pd-surface shadow-sm overflow-hidden flex flex-col transition-all duration-300",
+                    isDrawer ? "max-md:w-full max-md:h-full max-md:rounded-none" : "rounded-2xl"
+                )}
                 style={{ 
-                    aspectRatio: '16/9', 
-                    width: 'min(100cqw, 100cqh * 16 / 9)',
+                    aspectRatio: 'var(--area-ratio, 16/9)',
+                    width: 'var(--area-width, min(100cqw, 100cqh * 16 / 9))',
                 }}
             >
+                <style jsx>{`
+                    @media (max-width: 767px) {
+                        div {
+                            --area-ratio: ${isDrawer ? 'auto' : '16/9'};
+                            --area-width: ${isDrawer ? '100% !important' : 'min(100cqw, 100cqh * 16 / 9)'};
+                        }
+                    }
+                `}</style>
                 {gameState.status === 'LOBBY' ? (
                     <div className="absolute inset-0 pd-card flex flex-col items-center justify-center text-center p-4 md:p-8 animate-phase-in">
                         <Users className="w-10 h-10 md:w-24 md:h-24 text-pd-sky mb-2 md:mb-6 opacity-20" />
@@ -54,31 +66,37 @@ export function GameArea({
                         </h2>
 
                         {isDrawer ? (
-                            <div className="w-full max-w-4xl flex-1 min-h-0 overflow-y-auto px-2 z-20 scrollbar-hide">
-                                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-4 lg:gap-6 pb-4 max-w-2xl mx-auto">
-                                    {gameState.wordOptions?.map((pokemon) => (
-                                        <button
-                                            key={pokemon.id}
-                                            onClick={() => onSelectPokemon(pokemon.name)}
-                                            className="group flex flex-col items-center p-2 md:p-4 lg:p-6 bg-pd-surface-alt rounded-xl md:rounded-2xl transition-all hover:bg-pd-surface-alt/70 hover:scale-[1.02] active:scale-95 shadow-sm"
-                                        >
-                                            {gameState.config.showReference !== false && (
-                                                <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 mb-1 md:mb-3 relative group-hover:rotate-3 transition-transform">
-                                                    <img
-                                                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.pokedex_id}.png`}
-                                                        alt={pokemon.name}
-                                                        className="w-full h-full object-contain"
-                                                    />
+                            <div className="w-full h-full flex items-center justify-center p-4">
+                                <div className="w-full max-w-2xl flex flex-col gap-4 overflow-hidden">
+                                     <div className="grid grid-cols-2 gap-2 md:gap-4 lg:gap-6">
+                                        {gameState.wordOptions?.map((pokemon) => (
+                                            <button
+                                                key={pokemon.id}
+                                                onClick={() => {
+                                                    // @ts-ignore - Temporary hack to pass interaction back, though GameClient2 is parent
+                                                    if (window.handleInteraction) window.handleInteraction();
+                                                    onSelectPokemon(pokemon.name);
+                                                }}
+                                                className="group flex flex-col items-center p-2 md:p-4 lg:p-6 bg-pd-surface-alt rounded-xl md:rounded-2xl transition-all hover:bg-pd-surface-alt/70 hover:scale-[1.02] active:scale-95 shadow-sm"
+                                            >
+                                                {gameState.config.showReference !== false && (
+                                                    <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 mb-1 md:mb-3 relative group-hover:rotate-3 transition-transform">
+                                                        <img
+                                                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.pokedex_id}.png`}
+                                                            alt={pokemon.name}
+                                                            className="w-full h-full object-contain"
+                                                        />
+                                                    </div>
+                                                )}
+                                                <span className="text-sm md:text-xl lg:text-2xl font-black text-pd-text uppercase tracking-tight group-hover:text-pd-sky transition-colors truncate w-full px-1">
+                                                    {pokemon.name}
+                                                </span>
+                                                <div className="hidden md:block mt-1 px-2 py-0.5 bg-pd-sky/10 rounded-full text-pd-sky text-[8px] md:text-xs font-bold font-mono">
+                                                    GEN {pokemon.generation}
                                                 </div>
-                                            )}
-                                            <span className="text-sm md:text-xl lg:text-2xl font-black text-pd-text uppercase tracking-tight group-hover:text-pd-sky transition-colors truncate w-full px-1">
-                                                {pokemon.name}
-                                            </span>
-                                            <div className="hidden md:block mt-1 px-2 py-0.5 bg-pd-sky/10 rounded-full text-pd-sky text-[8px] md:text-xs font-bold font-mono">
-                                                GEN {pokemon.generation}
-                                            </div>
-                                        </button>
-                                    ))}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ) : (
@@ -100,16 +118,18 @@ export function GameArea({
                         <h2 className="text-xl md:text-4xl lg:text-5xl font-black text-pd-text mb-1 z-10 tracking-tight shrink-0">TIME&apos;S UP!</h2>
                         <p className="text-pd-text-muted mb-2 md:mb-6 font-bold text-[10px] md:text-xl uppercase tracking-widest shrink-0">The Pokémon was...</p>
 
-                        <div className="relative z-10 animate-in zoom-in duration-700 min-h-0 flex-1 flex flex-col items-center justify-center">
+                        <div className="relative z-10 animate-in zoom-in duration-700 min-h-0 flex-1 flex flex-col items-center justify-center w-full px-4">
                             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-pd-sky/20 blur-[60px] md:blur-[80px] rounded-full scale-150 animate-pulse pointer-events-none" />
-                            <div className="pd-panel p-3 md:p-12 rounded-2xl md:rounded-3xl shadow-sm md:shadow-md relative group flex flex-col items-center max-h-full overflow-hidden">
+                            <div className="pd-panel p-4 md:p-10 rounded-2xl md:rounded-3xl shadow-sm md:shadow-md relative group flex flex-col items-center max-h-[85%] md:max-h-full w-full max-w-2xl overflow-hidden box-border">
                                 <span className="hidden md:block absolute -top-3 left-1/2 -translate-x-1/2 bg-pd-sky text-white px-3 md:px-5 py-0.5 md:py-1 rounded-full text-[10px] md:text-sm font-black tracking-widest uppercase">REVEALED</span>
-                                <h3 className="text-lg md:text-6xl font-black text-pd-text uppercase tracking-tight mb-2 md:mb-6 truncate w-full text-center">{revealedWord || "???"}</h3>
-                                <div className="w-20 h-20 md:w-48 md:h-48 relative transform hover:scale-110 transition-transform duration-500 flex-1 min-h-0">
+                                <h3 className="text-xl md:text-5xl lg:text-6xl font-black text-pd-text uppercase tracking-tight mb-3 md:mb-6 truncate w-full text-center shrink-0 leading-tight">
+                                    {revealedWord || "???"}
+                                </h3>
+                                <div className="relative transform hover:scale-105 transition-transform duration-500 flex-1 w-full min-h-0 flex items-center justify-center">
                                     <img
                                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${revealedId}.png`}
                                         alt={revealedWord}
-                                        className="w-full h-full object-contain"
+                                        className="max-w-full max-h-full object-contain drop-shadow-2xl"
                                     />
                                 </div>
                             </div>
@@ -154,10 +174,20 @@ export function GameArea({
                         </div>
 
                         <Button
-                            onClick={() => window.location.href = '/'}
+                            onClick={() => {
+                                if (isDrawer && gameState.status === 'GAME_OVER') {
+                                    fetch('/api/room/start-round', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({ roomId })
+                                    });
+                                } else {
+                                    window.location.href = '/';
+                                }
+                            }}
                             className="mt-3 md:mt-10 font-black px-4 md:px-16 py-3 md:py-8 text-sm md:text-2xl rounded-xl md:rounded-2xl transition-all hover:scale-105 active:scale-95 shrink-0"
                         >
-                            {timeRemaining}s TO HOME...
+                            {isDrawer ? `${timeRemaining}s TO RESTART...` : `${timeRemaining}s TO HOME...`}
                         </Button>
                     </div>
                 ) : (
